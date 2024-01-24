@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./dist/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./favicon.png" type="image/x-icon" />
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body class="overflow-x-hidden">
+  <!-- header -->
+  <header class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-white transition-all duration-1000 ease-in-out flex justify-center">
+    <div class="container flex items-center justify-between">
+      <a href="./index.html" class="h-8 w-auto flex">
+        <img src="./images/logo.svg" alt="Logo" class="opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
+      </a>
+
+      <nav id="mobile-navigation"
+        class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto">
+        <div class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden">
+          <a href="./index.html">
+            <img src="./images/logo.svg" alt="Logo" class="opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
+          </a>
+          <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
+            <svg class="w-8 h-8 text-iconDark">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="flex items-center flex-col gap-8 lg:gap-12 text-white text-center lg:flex-row">
+          <li class="relative">
+            <a href="#about"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              O nas
+            </a>
+          </li>
+          <li class="relative">
+            <a href="#projects"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              Portal nieruchomości
+            </a>
+          </li>
+          <li class="relative">
+            <a href="#contact"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              Oferta
+            </a>
+          </li>
+          <li class="relative">
+            <a href="#contact"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="lg:hidden">
+          <svg class="w-8 h-8 text-iconDark">
+            <use href="./images/icons.svg#icon-open-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="bg-bgSectionBeige relative h-full lg:h-[46.063rem] py-10 lg:p-0">
+      <div class="swiper mySwiper w-full h-full">
+        <div class="swiper-wrapper relative">
+          <!-- slide 1 -->
+          <div class="swiper-slide bg-white flex">
+            <div class="relative flex w-full">
+              <div class="container lg:mx-auto flex flex-col lg:flex-row">
+                <div class="w-full lg:w-5/12 flex items-center">
+                  <div class="w-full lg:w-11/12">
+                    <h1 class="mb-11 text-left text-titleH1Mob md:text-titleH1 font-medium opacity-0 init-animate-5">
+                      Будуешь?
+                    </h1>
+                    <div class="flex flex-col md:flex-row justify-start items-center gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
+                      <a href="#contact"
+                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
+                        Skontaktuj się z nami
+                      </a>
+                      <a href="#projects"
+                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
+                        Zobacz nasze realizacje
+                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
+                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-1">
+                  <img src="./images/hero/slide-1.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide bg-white flex">
+            <div class="relative flex w-full">
+              <div class="container lg:mx-auto flex flex-col lg:flex-row">
+                <div class="w-full lg:w-5/12 flex items-center">
+                  <div class="w-full lg:w-11/12">
+                    <h1 class="mb-11 text-left text-titleH1Mob md:text-titleH1 font-medium opacity-0 init-animate-5">
+                      Інвестуєшь в нерухомість?
+                    </h1>
+                    <div class="flex flex-col md:flex-row justify-start items-center gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
+                      <a href="#contact"
+                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
+                        Skontaktuj się z nami
+                      </a>
+                      <a href="#projects"
+                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
+                        Zobacz nasze realizacje
+                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
+                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-4">
+                  <img src="./images/hero/slide-2.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide-3 -->
+          <div class="swiper-slide bg-white flex">
+            <div class="relative flex w-full">
+              <div class="container lg:mx-auto flex flex-col lg:flex-row">
+                <div class="w-full lg:w-5/12 flex items-center">
+                  <div class="w-full lg:w-11/12">
+                    <h1 class="mb-11 text-left text-titleH1Mob md:text-titleH1 font-medium opacity-0 init-animate-5">
+                      Продаєшь нерухосість?
+                    </h1>
+                    <div class="flex flex-col md:flex-row justify-start items-center gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
+                      <a href="#contact"
+                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
+                        Skontaktuj się z nami
+                      </a>
+                      <a href="#projects"
+                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
+                        Zobacz nasze realizacje
+                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
+                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-3">
+                  <img src="./images/hero/slide-3.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide-4 -->
+          <div class="swiper-slide bg-bgBlue flex">
+            <div class="flex w-full  justify-center items-center">
+              <img src="./images/logo-white.svg" alt="logo" class="h-[8rem] opacity-0 init-animate-1" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden z-20 absolute bottom-0 right-0 lg:flex items-center justify-center gap-[2.741rem] bg-white w-48 h-24 opacity-0 init-animate-2">
+        <button type="button" class="swiper-button-prev-ph group opacity-0 init-animate-4">
+          <svg class="w-12 h-12 fill-black duration-200 transform translate-x-0 group-hover:-translate-x-1">
+            <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
+          </svg>
+        </button>
+        <button type="button" class="swiper-button-next-ph group opacity-0 init-animate-5">
+          <svg class="w-12 h-12 fill-black duration-200 transform translate-x-0 group-hover:translate-x-1 rotate-180">
+            <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="lg:hidden w-full absolute z-30 top-1/2 -translate-y-1/2 flex justify-between item-center">
+        <button type="button" class="swiper-button-prev-ph group shadow-md bg-bgBlue opacity-0 init-animate-4">
+          <svg class="w-10 h-16 text-white duration-200 transform translate-x-0 group-hover:-translate-x-1 rotate-180">
+            <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
+          </svg>
+        </button>
+        <button type="button" class="swiper-button-next-ph group shadow-md bg-bgBlue opacity-0 init-animate-5">
+          <svg class="w-10 h-16 text-white duration-200 transform translate-x-0 group-hover:translate-x-1">
+            <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section class="py-20">
+      <div class="container">
+        <h2 class="text-[1.5rem] text-center font-semibold text-black mb-10">У нас есть для вас предложение</h2>
+        <ul class="w-8/12 mx-auto gap-8 grid grid-cols-1">
+          <li class="flex items-center gap-4">
+            <div class="w-[4rem] h-[4rem] rounded-full border-4 border-white  outline outline-4 outline-borderBlue bg-bgBlue flex justify-center items-center text-white font-bold text-[1.2rem]">1
+            </div>
+            <p>Описание 1</p>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-[4rem] h-[4rem] rounded-full border-4 border-white  outline outline-4 outline-borderBlue bg-bgBlue flex justify-center items-center text-white font-bold text-[1.2rem]">2
+            </div>
+            <p>Описание 2</p>
+          </li>
+          <li class="flex items-center gap-4">
+            <div class="w-[4rem] h-[4rem] rounded-full border-4 border-white  outline outline-4 outline-borderBlue bg-bgBlue flex justify-center items-center text-white font-bold text-[1.2rem]">3
+            </div>
+            <p>Описание 3</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <!-- footer -->
+  <footer id="contact" class="py-20 bg-bgFooter relative">
+    <div class="container relative">
+      <div class="w-full lg:w-10/12 mx-auto">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <img class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1 " data-delay="1s" data-time="1s" src="./images/logo-white.svg" alt="" />
+          <div class="flex flex-col lg:flex-row items-center gap-6">
+            <p class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2">Daj znać, co możemy dla Ciebie zrobić!</p>
+            <a href="#contact"
+              class="flex justify-center items-center w-10/12 lg:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4">
+              Skontaktuj się z nami
+            </a>
+          </div>
+        </div>
+        <span class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"></span>
+        <div class="flex flex-col lg:flex-row justify-between items-center mb-16 lg:mb-[7.5rem]">
+          <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12 md:mb-8 lg:mb-0 opacity-0 init-animate-5">
+            <li>
+              <a href="#contact" class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover">Kontakt</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollow" class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer nofollow" class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer nofollow" class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover">LinkedIn</a>
+            </li>
+          </ul>
+          <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-12 opacity-0 init-animate-4">
+            <li>
+              <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="tel:+48572289590">572 289 590</a>
+            </li>
+            <li><a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between opacity-0 init-animate-2" data-delay="0.5s">
+          <p class="text-textBase text-textLight mb-5 lg:mb-0">RealtyHub24.com - Prawa zastrzeżone © 2024</p>
+        </div>
+      </div>
+      <a href="#" id="backToTop" class="absolute hidden md:block cursor-pointer p-2 bg-bgBlue bottom-0 right-0 duration-200 hover:bottom-[0.2rem] opacity-0 init-animate-4">
+        <svg class="h-6 w-6 fill-textLight rotate-180">
+          <use href="./images/icons.svg#icon-Icon-subMenu"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

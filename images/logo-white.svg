@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1129.38 235">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #e2e2e2;
+      }
+
+      .cls-5 {
+        font-size: 166.12px;
+      }
+
+      .cls-5, .cls-3 {
+        font-family: Swiss721BT-BlackCondensed, 'Swis721 BlkCn BT';
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-size: 131.87px;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <path class="cls-1" d="m117.5,3c30.58,0,59.34,11.91,80.96,33.54,21.63,21.63,33.54,50.38,33.54,80.96s-11.91,59.34-33.54,80.96c-21.63,21.63-50.38,33.54-80.96,33.54s-59.34-11.91-80.96-33.54C14.91,176.84,3,148.08,3,117.5S14.91,58.16,36.54,36.54C58.16,14.91,86.92,3,117.5,3m0-3C52.61,0,0,52.61,0,117.5s52.61,117.5,117.5,117.5,117.5-52.61,117.5-117.5S182.39,0,117.5,0h0Z"/>
+      <path class="cls-1" d="m117.5,16c57.07,0,103.5,45.53,103.5,101.5s-46.43,101.5-103.5,101.5S14,173.47,14,117.5,60.43,16,117.5,16m0-3C58.68,13,11,59.79,11,117.5s47.68,104.5,106.5,104.5,106.5-46.79,106.5-104.5S176.32,13,117.5,13h0Z"/>
+      <text class="cls-3" transform="translate(39.82 169.63) scale(.98 1)"><tspan x="0" y="0">RH</tspan></text>
+      <text class="cls-5" transform="translate(240.22 181.19)"><tspan class="cls-4" x="0" y="0">Realty</tspan><tspan class="cls-2" x="438.41" y="0">Hub24</tspan></text>
+    </g>
+  </g>
+</svg>
