@@ -81,7 +81,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSwiper)\n/* harmony export */ });\nfunction initSwiper() {\r\n  new Swiper('.mySwiper', {\r\n    navigation: {\r\n      nextEl: '.swiper-button-next-ph',\r\n      prevEl: '.swiper-button-prev-ph',\r\n    },\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack://lp-from-real-estate/./src/js/modules/swiper.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSwiper)\n/* harmony export */ });\nfunction initSwiper() {\r\n  const swiper = new Swiper('.mySwiper', {\r\n    navigation: {\r\n      nextEl: '.swiper-button-next-ph',\r\n      prevEl: '.swiper-button-prev-ph',\r\n    },\r\n    autoplay: {\r\n      delay: 2000,\r\n      disableOnInteraction: false,\r\n    },\r\n  });\r\n\r\n  swiper.on('slideChange', function () {\r\n    if (swiper.isEnd) {\r\n      swiper.autoplay.stop();\r\n    }\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack://lp-from-real-estate/./src/js/modules/swiper.js?");
 
 /***/ })
 
