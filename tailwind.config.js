@@ -3,23 +3,28 @@ module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js'],
   theme: {
     screens: {
+      xs: '320px', // extra small devices, phones
       sm: '640px', // small devices, tablets
       md: '768px', // medium devices, small laptops
       lg: '1024px', // large devices, laptops
       xl: '1280px', // extra large devices, large laptops, desktops
       xxl: '1440px', // xxl devices, large desktops
       '2xl': '1920px', // Full HD screens
+      '3xl': '2560px', // QHD screens
+      '4xl': '3840px', // 4K screens
+      '5xl': '100%', // covers everything above
     },
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '10px', // small devices, tablets
-        md: '15px', // medium devices, small laptops
+        DEFAULT: '15px',
         lg: '20px', // large devices, laptops
         xl: '25px', // extra large devices, large laptops, desktops
         xxl: '30px', // xxl devices, large desktops
         '2xl': '35px', // Full HD screens
+        '3xl': '40px', // QHD screens
+        '4xl': '45px', // 4K screens
+        '5xl': '50px', // covers everything above
       },
     },
     fontSize: {
@@ -57,6 +62,9 @@ module.exports = {
         bgHeaderFixed: '#F9F9F9',
         navHeader: '#333',
         bgFooter: '#2C2C2C',
+      },
+      backgroundImage: {
+        bgContent: "url('images/bg-content.jpg')",
       },
       keyframes: {
         'fade-in-el': {
