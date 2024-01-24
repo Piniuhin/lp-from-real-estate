@@ -1015,9 +1015,6 @@ video {
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
-.fill-black {
-  fill: #000;
-}
 .fill-fillBlue {
   fill: #0088c4;
 }
