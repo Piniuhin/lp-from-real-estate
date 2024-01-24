@@ -1,0 +1,27 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-icon-arrow-btn" viewBox="0 0 30 32">
+<path  d="M30.118 15.991l-1.686-1.686-12.175 12.193v-25.557h-2.396v25.539l-12.175-12.175-1.686 1.686 15.068 15.068 15.050-15.068z"></path>
+</symbol>
+<symbol id="icon-icon-arrow-hero-slider" viewBox="0 0 32 32">
+<path d="M7.197 15.293c-0.391 0.391-0.391 1.024 0 1.414l6.364 6.364c0.39 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.657-5.657 5.657-5.657c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-6.364 6.364zM24.096 15h-16.192v2h16.192v-2z"></path>
+</symbol>
+<symbol id="icon-Icon-subMenu" viewBox="0 0 32 32">
+<path d="M5.68 12.838c-0.463-0.463-0.463-1.213 0-1.676 0.421-0.421 1.079-0.459 1.543-0.115l0.133 0.115 8.643 8.643 8.643-8.643c0.421-0.421 1.079-0.459 1.543-0.115l0.133 0.115c0.421 0.421 0.459 1.079 0.115 1.543l-0.115 0.133-9.482 9.482c-0.421 0.421-1.079 0.459-1.543 0.115l-0.133-0.115-9.482-9.482z"></path>
+</symbol>
+<symbol id="icon-search-header" viewBox="0 0 32 32">
+<path d="M13.333 3c-5.707 0-10.333 4.626-10.333 10.333s4.626 10.333 10.333 10.333c2.493 0 4.78-0.883 6.566-2.354l7.394 7.394 0.112 0.097c0.391 0.291 0.947 0.258 1.302-0.097 0.391-0.391 0.391-1.024 0-1.414l-7.394-7.394c1.471-1.785 2.354-4.072 2.354-6.566 0-5.707-4.626-10.333-10.333-10.333zM13.333 5c4.602 0 8.333 3.731 8.333 8.333s-3.731 8.333-8.333 8.333c-4.602 0-8.333-3.731-8.333-8.333s3.731-8.333 8.333-8.333z"></path>
+</symbol>
+<symbol id="icon-close-menu" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</symbol>
+<symbol id="icon-open-menu" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+   <path  stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</symbol>
+<symbol id="icon-arrow-hero-slider-mobile" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+</symbol>
+
+
+</defs>
+</svg>
