@@ -116,8 +116,14 @@ module.exports = {
           },
           '100%': { transform: 'translateX(0) scale(1)', opacity: 1 },
         },
+        jiggle: {
+          '0%, 20%, 100%': { transform: 'translateX(0)' },
+          '10%': { transform: 'translateX(-2px)' },
+          '15%': { transform: 'translateX(2px)' },
+        },
       },
       animation: {
+        'jiggle-animation': 'jiggle 3s ease-in-out infinite',
         'animate-1': 'fade-in-el 1s ease-out',
         'animate-1-1': 'fade-in-el-scale 1s ease-out',
         'animate-2': 'slide-up-el 1s ease-out',
