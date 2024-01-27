@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./dist/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./favicon.png" type="image/x-icon" />
+<script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body class="overflow-x-hidden">
+  <!-- header -->
+  <header class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-white transition-all duration-1000 ease-in-out flex justify-center shadow-md">
+    <div class="container flex items-center justify-between">
+      <a href="./index.html" class="h-8 w-auto flex">
+        <img src="./images/logo.svg" alt="Logo" class="opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
+      </a>
+
+      <nav id="mobile-navigation"
+        class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto">
+        <div class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden">
+          <a href="./index.html">
+            <img src="./images/logo.svg" alt="Logo" class="opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
+          </a>
+          <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
+            <svg class="w-8 h-8 text-iconDark">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="flex items-center flex-col gap-8 lg:gap-6 text-white text-center lg:flex-row">
+          <li class="relative">
+            <a href="/#about"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              O nas
+            </a>
+          </li>
+          <li class="relative">
+            <a href="/#realestate"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              Portal nieruchomości
+            </a>
+          </li>
+          <li class="relative">
+            <a href="/#contact"
+              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
+              Oferta
+            </a>
+          </li>
+          <li class="py-2 px-4 bg-bgBlue rounded-md">
+            <a href="https://realtyhub24.com/pl/register" target="_blank" rel="noopener noreferrer" class="text-navMenuMobile lg:text-navMenu text-white w-fit block">
+              Dołączyć się
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="lg:hidden">
+          <svg class="w-8 h-8 text-iconDark">
+            <use href="./images/icons.svg#icon-open-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-bgSectionBeige relative h-full lg:h-screen py-10 lg:p-0 ">
+      <div class="container ">
+        <div class="flex justify-center pt-[6rem]">
+          <h1
+            class="inline-block text-[1.5rem] text-center font-semibold text-textBlue mb-10 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-bgBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
+            Polityka prywatności
+          </h1>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer id="contact" class="pt-[5rem] pb-[5rem] bg-bgFooter">
+    <div class="container">
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <img class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1" data-delay="1s" data-time="1s" src="./images/logo-white.svg" alt="" />
+        <div class="flex flex-col lg:flex-row items-center gap-6">
+          <p class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2">
+            Masz dodatkowe pytania?
+          </p>
+          <a href="https://realtyhub24.com/pl/kontakt" target="_blank" rel="noopener noreferrer"
+            class="flex justify-center items-center w-10/12 lg:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4">
+            Skontaktuj się z nami
+          </a>
+        </div>
+      </div>
+      <span class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"></span>
+      <div class="flex flex-col lg:flex-row justify-between items-center">
+        <ul class="mb-5 flex gap-5">
+          <li class="group">
+            <a href="/privacy-policy.html" class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Polityka prywatności</a>
+          </li>
+          <li class="group">
+            <a href="/service-cost.html" class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Cennik usług</a>
+          </li>
+        </ul>
+        <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-12 opacity-0 init-animate-4">
+          <li>
+            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="tel:+48537450501">tel: 537 450 501</a>
+          </li>
+          <li>
+            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="mailto:giarddesign@kontakt.pl">email: kontakt@realtyhub24.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-textBase text-neutral-400 mt-5 lg:mb-0">
+        RealtyHub24.com - Wszelkie prawa zastrzeżone © 2024
+      </p>
+    </div>
+  </footer>
+  <a href="#" id="backToTop" class="fixed bottom-[2rem] right-10 hidden md:block cursor-pointer p-2 bg-bgBlue duration-300 group">
+    <svg class="h-6 w-6 fill-textLight rotate-180 duration-300 group-hover:-translate-y-1">
+      <use href="./images/icons.svg#icon-Icon-subMenu"></use>
+    </svg>
+  </a>
+  <div class="form-container p-6 fixed z-50 top-[10rem] left-0 w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
+    <form action="путь_обработчика_формы" method="post">
+      <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
+      <div class="mb-4">
+        <input type="text" name="fullname" placeholder="Imię i Nazwisko" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+      </div>
+      <div class="mb-4">
+        <input type="text" name="company" placeholder="Nazwa firmy" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+      </div>
+      <div class="mb-4">
+        <input type="email" name="email" placeholder="Email" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+      </div>
+      <div class="mb-4">
+        <input type="tel" name="phone" placeholder="Numer telefonu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+      </div>
+      <div class="mb-4">
+        <textarea name="message" placeholder="Wiadomość" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
+      </div>
+      <div class="mb-4 flex items-center">
+        <input type="checkbox" name="privacy_policy" id="privacy_policy" required class="mr-2">
+        <label for="privacy_policy" class="text-sm">Zgadzam się z polityką prywatności</label>
+      </div>
+      <div>
+        <button type="submit"
+          class="w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Wyślij</button>
+      </div>
+    </form>
+
+    <button id="open-form" class="absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+      </svg>
+    </button>
+
+    <button id="close-form" class="hidden absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8  duration-200 group-hover:scale-90">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
