@@ -1030,9 +1030,6 @@ video {
 .rounded-full {
   border-radius: 9999px;
 }
-.rounded-md {
-  border-radius: 0.375rem;
-}
 .border {
   border-width: 1px;
 }
@@ -1138,6 +1135,10 @@ video {
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .pb-\[5rem\] {
   padding-bottom: 5rem;
