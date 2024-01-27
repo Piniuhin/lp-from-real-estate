@@ -52,13 +52,7 @@
               Oferta
             </a>
           </li>
-          <li class="relative">
-            <a href="#contact"
-              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
-              Kontakt
-            </a>
-          </li>
-          <li class="p-2 bg-bgBlue rounded-md">
+          <li class="py-2 px-4 bg-bgBlue rounded-md">
             <a href="https://realtyhub24.com/pl/register" target="_blank" rel="noopener noreferrer" class="text-navMenuMobile lg:text-navMenu text-white w-fit block">
               Dołączyć się
             </a>
@@ -217,13 +211,13 @@
     <!-- O nas -->
     <section id="about" class="py-20">
       <div class="container">
-         <div class="flex justify-center">
-              <h2
-                class="inline-block text-[1.5rem] text-center font-semibold text-textBlue mb-10 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[1px] after:bg-bgBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
-                O nas
-              </h2>
-            </div>
-            <p>text</p>
+        <div class="flex justify-center">
+          <h2
+            class="inline-block text-[1.5rem] text-center font-semibold text-textBlue mb-10 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[1px] after:bg-bgBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
+            O nas
+          </h2>
+        </div>
+        <p>text</p>
       </div>
     </section>
     <!-- realestate -->
@@ -264,144 +258,153 @@
     <!-- Offer -->
     <section id="about" class="py-20">
       <div class="container">
-  <div class="flex justify-center">
-              <h2
-                class="inline-block text-[1.5rem] text-center font-semibold text-black/90 mb-10 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[1px] after:bg-black/90 after:w-6/12 after:transition after:duration-200 after:origin-center">
-                Oferta
-              </h2>
-            </div>
+        <div class="flex justify-center">
+          <h2
+            class="inline-block text-[1.5rem] text-center font-semibold text-black/90 mb-10 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[1px] after:bg-black/90 after:w-6/12 after:transition after:duration-200 after:origin-center">
+            Oferta
+          </h2>
+        </div>
       </div>
     </section>
     <!-- formProject -->
     <section id="formadd" class="py-20">
       <div class="container">
-        
-            <div class="flex justify-center">
-              <h2
-                class="inline-block text-[1.5rem] text-center font-semibold text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-textBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
-                Formularz Zgłoszenia Publikacji Nieruchomości 
-              </h2>
+
+        <div class="flex justify-center">
+          <h2
+            class="inline-block text-[1.5rem] text-center font-semibold text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-textBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
+            Formularz Zgłoszenia Publikacji Nieruchomości
+          </h2>
+        </div>
+        <p class="text-center mt-2">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
+
+        <div class="w-10/12 mx-auto bg-white p-8 ">
+          <form action="путь_обработчика_формы" method="post">
+            <div class="gap-10 grid grid-cols-3">
+              <!-- Имя и фамилия -->
+              <div class="mb-4">
+                <label for="fullname" class="block text-sm font-medium text-gray-700">Imię i nazwisko</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Imię i nazwisko" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- Название фирмы -->
+              <div class="mb-4">
+                <label for="company" class="block text-sm font-medium text-gray-700">Nazwa firmy</label>
+                <input type="text" name="company" id="company" placeholder="Nazwa firmy" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- NIP -->
+              <div class="mb-4">
+                <label for="nip" class="block text-sm font-medium text-gray-700">NIP</label>
+                <input type="text" name="nip" id="nip" placeholder="NIP" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
             </div>
-              <p class="text-center mt-2">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
 
-          <div class="w-10/12 mx-auto bg-white p-8 ">
-  <form action="путь_обработчика_формы" method="post">
-    <div class="gap-10 grid grid-cols-3">
-      <!-- Имя и фамилия -->
-      <div class="mb-4">
-        <label for="fullname" class="block text-sm font-medium text-gray-700">Imię i nazwisko</label>
-        <input type="text" name="fullname" id="fullname" placeholder="Imię i nazwisko" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- Название фирмы -->
-      <div class="mb-4">
-        <label for="company" class="block text-sm font-medium text-gray-700">Nazwa firmy</label>
-        <input type="text" name="company" id="company" placeholder="Nazwa firmy" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- NIP -->
-      <div class="mb-4">
-        <label for="nip" class="block text-sm font-medium text-gray-700">NIP</label>
-        <input type="text" name="nip" id="nip" placeholder="NIP" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-    </div>
+            <div class="gap-10 grid grid-cols-2">
+              <!-- Адрес email -->
+              <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Adres email</label>
+                <input type="email" name="email" id="email" placeholder="Adres email" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- Номер телефона -->
+              <div class="mb-4">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Numer telefonu</label>
+                <input type="tel" name="phone" id="phone" placeholder="Numer telefonu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+            </div>
 
-    <div class="gap-10 grid grid-cols-2">
-      <!-- Адрес email -->
-      <div class="mb-4">
-        <label for="email" class="block text-sm font-medium text-gray-700">Adres email</label>
-        <input type="email" name="email" id="email" placeholder="Adres email" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- Номер телефона -->
-      <div class="mb-4">
-        <label for="phone" class="block text-sm font-medium text-gray-700">Numer telefonu</label>
-        <input type="tel" name="phone" id="phone" placeholder="Numer telefonu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-    </div>
+            <!-- Название объекта -->
+            <div class="mb-4">
+              <label for="objectname" class="block text-sm font-medium text-gray-700">Nazwa obiektu</label>
+              <input type="text" name="objectname" id="objectname" placeholder="Nazwa obiektu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+            </div>
+            <!-- Описание объекта -->
+            <div class="mb-4">
+              <label for="objectdescription" class="block text-sm font-medium text-gray-700">Opis obiektu</label>
+              <textarea name="objectdescription" id="objectdescription" placeholder="Opis obiektu" required
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
+            </div>
 
-    <!-- Название объекта -->
-    <div class="mb-4">
-      <label for="objectname" class="block text-sm font-medium text-gray-700">Nazwa obiektu</label>
-      <input type="text" name="objectname" id="objectname" placeholder="Nazwa obiektu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-    </div>
-    <!-- Описание объекта -->
-    <div class="mb-4">
-      <label for="objectdescription" class="block text-sm font-medium text-gray-700">Opis obiektu</label>
-      <textarea name="objectdescription" id="objectdescription" placeholder="Opis obiektu" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
-    </div>
+            <div class="gap-10 grid grid-cols-3">
+              <!-- Количество домов -->
+              <div class="mb-4">
+                <label for="numberofhouses" class="block text-sm font-medium text-gray-700">Liczba domów</label>
+                <input type="number" name="numberofhouses" id="numberofhouses" placeholder="Liczba domów" required
+                  class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- Количество этажей -->
+              <div class="mb-4">
+                <label for="numberoffloors" class="block text-sm font-medium text-gray-700">Liczba pięter</label>
+                <input type="number" name="numberoffloors" id="numberoffloors" placeholder="Liczba pięter" required
+                  class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- Количество квартир -->
+              <div class="mb-4">
+                <label for="numberofapartments" class="block text-sm font-medium text-gray-700">Liczba mieszkań</label>
+                <input type="number" name="numberofapartments" id="numberofapartments" placeholder="Liczba mieszkań"
+                  class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+            </div>
 
-    <div class="gap-10 grid grid-cols-3">
-      <!-- Количество домов -->
-      <div class="mb-4">
-        <label for="numberofhouses" class="block text-sm font-medium text-gray-700">Liczba domów</label>
-        <input type="number" name="numberofhouses" id="numberofhouses" placeholder="Liczba domów" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- Количество этажей -->
-      <div class="mb-4">
-        <label for="numberoffloors" class="block text-sm font-medium text-gray-700">Liczba pięter</label>
-        <input type="number" name="numberoffloors" id="numberoffloors" placeholder="Liczba pięter" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- Количество квартир -->
-      <div class="mb-4">
-        <label for="numberofapartments" class="block text-sm font-medium text-gray-700">Liczba mieszkań</label>
-        <input type="number" name="numberofapartments" id="numberofapartments" placeholder="Liczba mieszkań" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-    </div>
+            <!-- Локализация -->
+            <div class="mb-4">
+              <label for="location" class="block text-sm font-medium text-gray-700">Lokalizacja (link z Google Maps)</label>
+              <input type="url" name="location" id="location" placeholder="Lokalizacja (link z Google Maps)" required
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+            </div>
 
-    <!-- Локализация -->
-    <div class="mb-4">
-      <label for="location" class="block text-sm font-medium text-gray-700">Lokalizacja (link z Google Maps)</label>
-      <input type="url" name="location" id="location" placeholder="Lokalizacja (link z Google Maps)" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-    </div>
+            <div class="gap-10 grid grid-cols-2">
+              <!-- Фотографии -->
+              <div class="mb-4">
+                <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia</label>
+                <input type="file" name="photos" id="photos" required multiple class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <!-- Видео -->
+              <div class="mb-4">
+                <label for="video" class="block text-sm font-medium text-gray-700">Video (link do filmu)</label>
+                <input type="url" name="video" id="video" placeholder="Video (link do filmu)" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+            </div>
 
-    <div class="gap-10 grid grid-cols-2">
-      <!-- Фотографии -->
-      <div class="mb-4">
-        <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia</label>
-        <input type="file" name="photos" id="photos" required multiple class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <!-- Видео -->
-      <div class="mb-4">
-        <label for="video" class="block text-sm font-medium text-gray-700">Video (link do filmu)</label>
-        <input type="url" name="video" id="video" placeholder="Video (link do filmu)" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-    </div>
+            <!-- Цены -->
+            <div class="mb-4 grid grid-cols-2 gap-4">
+              <div>
+                <label for="minprice" class="block text-sm font-medium text-gray-700">Min. cena</label>
+                <input type="number" name="minprice" id="minprice" placeholder="Min. cena" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+              <div>
+                <label for="maxprice" class="block text-sm font-medium text-gray-700">Maks. cena</label>
+                <input type="number" name="maxprice" id="maxprice" placeholder="Maks. cena" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
+              </div>
+            </div>
 
-    <!-- Цены -->
-    <div class="mb-4 grid grid-cols-2 gap-4">
-      <div>
-        <label for="minprice" class="block text-sm font-medium text-gray-700">Min. cena</label>
-        <input type="number" name="minprice" id="minprice" placeholder="Min. cena" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-      <div>
-        <label for="maxprice" class="block text-sm font-medium text-gray-700">Maks. cena</label>
-        <input type="number" name="maxprice" id="maxprice" placeholder="Maks. cena" class="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
-      </div>
-    </div>
-
-    <!-- Удобства -->
-    <div class="mb-4">
-      <label for="amenities" class="block text-sm font-medium text-gray-700">Udogodnienia (np. winda, ochrona, okna PCV)</label>
-      <textarea name="amenities" id="amenities" placeholder="Udogodnienia (np. winda, ochrona, okna PCV)" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
-    </div>
-    <!-- Ключевые локации -->
-    <div class="mb-4">
-      <label for="keylocations" class="block text-sm font-medium text-gray-700">Kluczowe lokalizacje (np. przystanek autobusowy - 100m, supermarket - 50m)</label>
-      <textarea name="keylocations" id="keylocations" placeholder="Kluczowe lokalizacje (np. przystanek autobusowy - 100m, supermarket - 50m)" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
-    </div>
-    <!-- Дополнительная информация -->
-    <div class="mb-4">
-      <label for="additionalinfo" class="block text-sm font-medium text-gray-700">Dodatkowe informacje</label>
-      <textarea name="additionalinfo" id="additionalinfo" placeholder="Dodatkowe informacje" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
-    </div>
-    <!-- Согласие политики приватности -->
-    <div class="mb-4 flex items-center">
-      <input type="checkbox" name="privacy_policy" id="privacy_policy" required class="mr-2">
-      <label for="privacy_policy" class="text-sm">Zgadzam się z polityką prywatności</label>
-    </div>
-    <div>
-      <button type="submit" class="w-2/12 border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Wyślij</button>
-    </div>
-  </form>
-</div>
+            <!-- Удобства -->
+            <div class="mb-4">
+              <label for="amenities" class="block text-sm font-medium text-gray-700">Udogodnienia (np. winda, ochrona, okna PCV)</label>
+              <textarea name="amenities" id="amenities" placeholder="Udogodnienia (np. winda, ochrona, okna PCV)"
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
+            </div>
+            <!-- Ключевые локации -->
+            <div class="mb-4">
+              <label for="keylocations" class="block text-sm font-medium text-gray-700">Kluczowe lokalizacje (np. przystanek autobusowy - 100m, supermarket - 50m)</label>
+              <textarea name="keylocations" id="keylocations" placeholder="Kluczowe lokalizacje (np. przystanek autobusowy - 100m, supermarket - 50m)"
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
+            </div>
+            <!-- Дополнительная информация -->
+            <div class="mb-4">
+              <label for="additionalinfo" class="block text-sm font-medium text-gray-700">Dodatkowe informacje</label>
+              <textarea name="additionalinfo" id="additionalinfo" placeholder="Dodatkowe informacje"
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue"></textarea>
+            </div>
+            <!-- Согласие политики приватности -->
+            <div class="mb-4 flex items-center">
+              <input type="checkbox" name="privacy_policy" id="privacy_policy" required class="mr-2">
+              <label for="privacy_policy" class="text-sm">Zgadzam się z polityką prywatności</label>
+            </div>
+            <div>
+              <button type="submit"
+                class="w-2/12 border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Wyślij</button>
+            </div>
+          </form>
+        </div>
 
       </div>
     </section>
@@ -410,30 +413,37 @@
   <!-- footer -->
   <footer id="contact" class="pt-[5rem] pb-[5rem] bg-bgFooter">
     <div class="container">
-        <div class="flex flex-col lg:flex-row items-center justify-between">
-          <img class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1" data-delay="1s" data-time="1s" src="./images/logo-white.svg" alt="" />
-          <div class="flex flex-col lg:flex-row items-center gap-6">
-            <p class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2">
-              Masz dodatkowe pytania?
-            </p>
-            <a href="https://realtyhub24.com/pl/kontakt" target="_blank" rel="noopener noreferrer"
-              class="flex justify-center items-center w-10/12 lg:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4">
-              Skontaktuj się z nami
-            </a>
-          </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <img class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1" data-delay="1s" data-time="1s" src="./images/logo-white.svg" alt="" />
+        <div class="flex flex-col lg:flex-row items-center gap-6">
+          <p class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2">
+            Masz dodatkowe pytania?
+          </p>
+          <a href="https://realtyhub24.com/pl/kontakt" target="_blank" rel="noopener noreferrer"
+            class="flex justify-center items-center w-10/12 lg:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4">
+            Skontaktuj się z nami
+          </a>
         </div>
-        <span class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"></span>
-        <div class="flex flex-col lg:flex-row justify-between items-center">
-          <a href="#" class="text-textBase text-textLight mb-5 lg:mb-0 duration-200 hover:text-textBlue ">Polityka prywatności</a>
-          <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-12 opacity-0 init-animate-4">
-            <li>
-              <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="tel:+48537450501">tel: 537 450 501</a>
-            </li>
-            <li>
-              <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="mailto:giarddesign@kontakt.pl">email: kontakt@realtyhub24.com</a>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <span class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"></span>
+      <div class="flex flex-col lg:flex-row justify-between items-center">
+        <ul class="mb-5 flex gap-5">
+          <li class="group">
+            <a href="/privacy-policy.html" class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Polityka prywatności</a>
+          </li>
+           <li class="group">
+            <a href="/service-cost.html" class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Cennik usług</a>
+          </li>
+        </ul>
+        <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-12 opacity-0 init-animate-4">
+          <li>
+            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="tel:+48537450501">tel: 537 450 501</a>
+          </li>
+          <li>
+            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="mailto:giarddesign@kontakt.pl">email: kontakt@realtyhub24.com</a>
+          </li>
+        </ul>
+      </div>
 
       <p class="text-textBase text-neutral-400 mt-5 lg:mb-0">
         RealtyHub24.com - Wszelkie prawa zastrzeżone © 2024
@@ -473,7 +483,7 @@
       </div>
     </form>
 
-    <button id="open-form" class="absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
+    <button id="open-form" class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />

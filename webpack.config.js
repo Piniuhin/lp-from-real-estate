@@ -39,7 +39,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/privacy-policy.html',
+      filename: 'privacy-policy.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/service-cost.html',
+      filename: 'service-cost.html',
+    }),
+
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
@@ -52,6 +62,7 @@ module.exports = {
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
+
     compress: true,
     port: 9000,
     hot: true, // Включение HMR
