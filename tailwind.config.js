@@ -31,7 +31,7 @@ module.exports = {
       textBase: ['16px', '150%'],
       navMenu: ['14px', '16px'],
       titleH1: ['60px', '70px'],
-      titleH1Mob: ['40px', '50px'],
+      titleH1Mob: ['24px', '30px'],
       titleH2: ['48px', '115%'],
       titleH2Mob: ['40px', '115%'],
       titleH3: ['28px', '115%'],
