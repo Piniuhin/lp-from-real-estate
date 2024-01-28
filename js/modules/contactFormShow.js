@@ -1,5 +1,5 @@
 export default function contactFormShow() {
-  const formContainer = document.querySelector('.form-container');
+  const formContainer = document.querySelector('.contact-form-wrapper');
   const openBtn = document.getElementById('open-form');
   const closeBtn = document.getElementById('close-form');
 
