@@ -22,18 +22,30 @@
   .text-content p {
     @apply mb-4 text-[1rem];
   }
-  .client-form-wrapper input::placeholder,
-  .client-form-wrapper textarea::placeholder {
-    @apply text-[0.9rem] lg:text-[1rem];
-  }
   .contact-form-wrapper input::placeholder,
   .contact-form-wrapper textarea::placeholder {
     @apply text-[0.9rem] lg:text-[1rem];
   }
   .contact-form-wrapper input:checked + label {
-    @apply text-green-500;
+    @apply text-green-700;
+  }
+  .contact-form-wrapper input[type='checkbox'] {
+    @apply appearance-none cursor-pointer inline-flex p-1 border-white  border-4 outline-2 outline;
+  }
+  .contact-form-wrapper input[type='checkbox']:checked {
+    @apply bg-green-700 border-white  border-4 outline-green-700;
+  }
+  .client-form-wrapper input::placeholder,
+  .client-form-wrapper textarea::placeholder {
+    @apply text-[0.9rem] lg:text-[1rem];
   }
   .client-form-wrapper input:checked + label {
-    @apply text-green-500;
+    @apply text-green-700;
+  }
+  .client-form-wrapper input[type='checkbox'] {
+    @apply appearance-none cursor-pointer inline-flex p-1 border-white  border-4 outline-2 outline;
+  }
+  .client-form-wrapper input[type='checkbox']:checked {
+    @apply bg-green-700 border-white  border-4 outline-green-700;
   }
 }
