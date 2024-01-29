@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 
@@ -35,25 +35,25 @@
 
         <ul class="flex items-center flex-col gap-8 lg:gap-6 text-white text-center lg:flex-row">
           <li class="relative">
-            <a href="/#about"
+            <a href="#about"
               class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
               O nas
             </a>
           </li>
           <li class="relative">
-            <a href="/#realestate"
+            <a href="#realestate"
               class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
               Portal nieruchomości
             </a>
           </li>
           <li class="relative">
-            <a href="/#contact"
+            <a href="#contact"
               class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
               Oferta
             </a>
           </li>
-          <li class="py-3 px-4 bg-bgBlue rounded-full">
-            <a href="https://realtyhub24.com/pl/register" target="_blank" rel="noopener noreferrer" class="text-navMenuMobile lg:text-navMenu text-white w-fit block">
+          <li class="border border-bordeBlue duration-200 bg-bgBlue hover:bg-transparent rounded-full group">
+            <a href="https://realtyhub24.com/pl/register" target="_blank" rel="noopener noreferrer" class="py-3 px-4 text-navMenuMobile lg:text-navMenu text-white  w-fit block duration-200 group-hover:text-textBlue">
               Dołączyć się
             </a>
           </li>
@@ -121,13 +121,8 @@
       </p>
     </div>
   </footer>
-  <a href="#" id="backToTop" class="fixed bottom-[2rem] right-10 hidden md:block cursor-pointer p-2 bg-bgBlue duration-300 group">
-    <svg class="h-6 w-6 fill-textLight rotate-180 duration-300 group-hover:-translate-y-1">
-      <use href="./images/icons.svg#icon-Icon-subMenu"></use>
-    </svg>
-  </a>
-  <div class="contact-form-wrapper p-6 fixed z-50 top-[10rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
-    <form action="путь_обработчика_формы" method="post">
+    <div class="contact-form-wrapper p-6 fixed z-50 top-[10rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
+    <form action="./php/contact-form.php" method="post">
       <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
       <div class="mb-4">
         <input type="text" name="fullname" placeholder="Imię i Nazwisko *" required class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-bordeBlue">
@@ -146,13 +141,11 @@
       </div>
 
       <div class="mb-4 flex items-center">
-        <input type="checkbox" name="privacy_policy" id="privacy_policy" required class="mr-2">
-        <label for="privacy_policy" class="text-sm">Zgadzam się z
+        <input type="checkbox" name="privacy_policy_contact_form" id="privacy_policy_contact_form" required class="mr-2">
+        <label for="privacy_policy_contact_form" class="text-sm">Zgadzam się z
           <a href="http://localhost:9000/privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">polityką prywatności</a>
         </label>
       </div>
-
-
       <div>
         <button type="submit"
           class="w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
@@ -173,6 +166,11 @@
     </button>
 
   </div>
+  <a href="#" id="backToTop" class="fixed bottom-[2rem] right-10 hidden md:block cursor-pointer p-2 bg-bgBlue duration-300 group">
+    <svg class="h-6 w-6 fill-textLight rotate-180 duration-300 group-hover:-translate-y-1">
+      <use href="./images/icons.svg#icon-Icon-subMenu"></use>
+    </svg>
+  </a>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script type="module" src="./js/index.js"></script>
 </body>

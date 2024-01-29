@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
@@ -35,6 +35,7 @@
   .contact-form-wrapper input[type='checkbox']:checked {
     @apply bg-green-700 border-white  border-4 outline-green-700;
   }
+
   .client-form-wrapper input::placeholder,
   .client-form-wrapper textarea::placeholder {
     @apply text-[0.9rem] lg:text-[1rem];
