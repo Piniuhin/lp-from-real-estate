@@ -22,6 +22,43 @@
   .text-content p {
     @apply mb-4 text-[1rem];
   }
+  .text-content h2 {
+    @apply text-[1.4rem] font-semibold mb-5;
+  }
+  .text-content h3 {
+    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+  }
+  .text-content h4 {
+    @apply text-black/60 text-[1.1rem] font-semibold mb-5;
+  }
+  .text-content ul {
+    @apply list-disc pl-8 mb-5;
+  }
+  .text-content ul li p {
+    @apply mb-1;
+  }
+  .text-content-price p {
+    @apply mb-4 text-[1rem];
+  }
+  .text-content-price h2 {
+    @apply text-[1.4rem] font-semibold mb-5;
+  }
+  .text-content-price h3 {
+    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+  }
+  .text-content-price h4 {
+    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+  }
+  .text-content-price ul {
+    @apply list-disc pl-8;
+  }
+  .text-content-price ul li p {
+    @apply mb-1;
+  }
+  .contact-form-wrapper input,
+  .contact-form-wrapper textarea {
+    @apply border-0 border-b-2;
+  }
   .contact-form-wrapper input::placeholder,
   .contact-form-wrapper textarea::placeholder {
     @apply text-[0.9rem] lg:text-[1rem];
