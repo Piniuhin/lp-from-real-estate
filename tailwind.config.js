@@ -65,6 +65,7 @@ module.exports = {
       backgroundImage: {
         bgContent: "url('images/bg-content.jpg')",
       },
+
       keyframes: {
         'fade-in-el': {
           '0%': { opacity: 0 },
