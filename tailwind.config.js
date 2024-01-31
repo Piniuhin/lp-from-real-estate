@@ -3,7 +3,6 @@ module.exports = {
   purge: ['./src/**/*.html', './src/**/*.js'],
   theme: {
     screens: {
-      xs: '320px', // extra small devices, phones
       sm: '640px', // small devices, tablets
       md: '768px', // medium devices, small laptops
       lg: '1024px', // large devices, laptops
@@ -17,8 +16,7 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '15px',
-        lg: '20px', // large devices, laptops
+        DEFAULT: '20px',
         xl: '25px', // extra large devices, large laptops, desktops
         xxl: '30px', // xxl devices, large desktops
         '2xl': '35px', // Full HD screens

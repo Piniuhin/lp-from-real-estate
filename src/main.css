@@ -38,7 +38,7 @@
     @apply mb-1;
   }
   .text-content-price p {
-    @apply mb-4 text-[1rem];
+    @apply mb-4;
   }
   .text-content-price h2 {
     @apply text-[1.4rem] font-semibold mb-5;
@@ -47,11 +47,9 @@
     @apply text-black/60 text-[1.2rem] font-semibold mb-5;
   }
   .text-content-price h4 {
-    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+    @apply text-black/60 text-[1.2rem];
   }
-  .text-content-price ul {
-    @apply list-disc pl-8;
-  }
+
   .text-content-price ul li p {
     @apply mb-1;
   }
