@@ -1128,6 +1128,9 @@ video {
 .list-none {
   list-style-type: none;
 }
+.list-image-\[url\(images\/checkmark\.svg\)\] {
+  list-style-image: url(images/6b5d9ccc78d115bc5022.svg);
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1466,8 +1469,14 @@ video {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.marker\:text-\[1\.5rem\] *::marker {
+  font-size: 1.5rem;
+}
 .marker\:text-textBlue *::marker {
   color: rgb(0 136 196 );
+}
+.marker\:text-\[1\.5rem\]::marker {
+  font-size: 1.5rem;
 }
 .marker\:text-textBlue::marker {
   color: rgb(0 136 196 );
