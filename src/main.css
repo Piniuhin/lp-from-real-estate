@@ -26,7 +26,7 @@
     @apply text-[1.4rem] font-semibold mb-5;
   }
   .text-content h3 {
-    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+    @apply text-black/60 text-[1.2rem] font-bold mb-5;
   }
   .text-content h4 {
     @apply text-black/60 text-[1.1rem] font-semibold mb-5;
@@ -44,7 +44,7 @@
     @apply text-[1.4rem] font-semibold mb-5;
   }
   .text-content-price h3 {
-    @apply text-black/60 text-[1.2rem] font-semibold mb-5;
+    @apply text-black/60 text-[1.4rem] font-bold mb-5;
   }
   .text-content-price h4 {
     @apply text-black/60 text-[1.2rem];
@@ -72,7 +72,7 @@
   }
   .client-form-wrapper input,
   .client-form-wrapper textarea {
-    @apply border-0 border-b-2;
+    @apply border-0 border-b-2 bg-sky-50;
   }
   .client-form-wrapper input::placeholder,
   .client-form-wrapper textarea::placeholder {

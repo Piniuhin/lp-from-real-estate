@@ -347,7 +347,7 @@
       </div>
     </section>
     <!-- formProject -->
-    <section id="form-add" class="py-20">
+    <section id="form-add" class="py-20 bg-sky-50">
       <div class="container">
         <div class="w-full xxl:w-10/12 mx-auto">
 
@@ -360,7 +360,7 @@
           </div>
           <p class="text-center">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
 
-          <div class="client-form-wrapper bg-white pb-8 mt-10">
+          <div class="client-form-wrapper pb-8 mt-10">
             <form action="путь_обработчика_формы" method="post">
               <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
                 <!-- Имя и фамилия -->
@@ -470,15 +470,17 @@
                   class="w-full py-2 border rounded focus:outline-none"></textarea>
               </div>
               <!-- Согласие политики приватности -->
-              <div class="mb-4 flex items-center">
-                <input type="checkbox" name="privacy_policy_client_form" id="privacy_policy_client_form" required class="form-checkbox mr-2">
-                <label for="privacy_policy_client_form" class="text-sm">Zgadzam się z
-                  <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">polityką prywatności</a>
-                </label>
-              </div>
-              <div>
-                <button type="submit"
-                  class="w-full sm:max-w-[15rem] border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4  rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
+              <div class="flex items-center justify-between gap-5 mt-5">
+                <div class="mb-4 flex items-center">
+                  <input type="checkbox" name="privacy_policy_client_form" id="privacy_policy_client_form" required class="form-checkbox mr-2">
+                  <label for="privacy_policy_client_form" class="text-sm">Zgadzam się z
+                    <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">polityką prywatności</a>
+                  </label>
+                </div>
+                <div>
+                  <button type="submit"
+                    class="w-full sm:w-[15rem]  border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4  rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
+                </div>
               </div>
             </form>
           </div>
