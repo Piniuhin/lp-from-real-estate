@@ -471,16 +471,30 @@
                   class="w-full py-2 border rounded focus:outline-none"></textarea>
               </div>
               <!-- Согласие политики приватности -->
-              <div class="flex items-center justify-between gap-5 mt-5">
-                <div class="mb-4 flex items-center">
-                  <input type="checkbox" name="privacy_policy_client_form" id="privacy_policy_client_form" required class="form-checkbox mr-2">
-                  <label for="privacy_policy_client_form" class="text-sm">Zgadzam się z
-                    <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">polityką prywatności</a>
+              <div class="flex flex-col lg:flex-row items-center justify-between gap-5 mt-5">
+                <div class="lg:w-10/12 mb-4 flex items-start">
+                  <input type="checkbox" name="privacy_policy_client_form" id="privacy_policy_client_form" required class="form-checkbox mr-2 mt-2">
+                  <label for="privacy_policy_client_form" class="text-sm pl-3">Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych dotyczących usług serwisu drogą elektroniczną.
+                    <button class="js-open">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </button>
+                    <span class="hidden">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z korzystaniem z usług serwisu RealtyHub24.com, zgodnie z ustawą o ochronie
+                      danych
+                      osobowych oraz zgodnie z
+                      <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">Polityką Prywatności.</a>
+                      <button class="js-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                      </button>
+                    </span>
                   </label>
                 </div>
-                <div>
+                <div class="lg:w-2/12">
                   <button type="submit"
-                    class="w-full sm:w-[15rem]  border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4  rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
+                    class="w-full sm:w-[15rem] lg:w-full   border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4  rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
                 </div>
               </div>
             </form>
@@ -531,6 +545,8 @@
       </p>
     </div>
   </footer>
+
+
   <div class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
     <form action="./php/contact-form.php" method="post">
       <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
@@ -550,10 +566,24 @@
         <textarea name="message" placeholder="Wiadomość *" required class="w-full py-2 border rounded focus:outline-none"></textarea>
       </div>
 
-      <div class="mb-4 flex items-center">
-        <input type="checkbox" name="privacy_policy_contact_form" id="privacy_policy_contact_form" required class="mr-2">
-        <label for="privacy_policy_contact_form" class="text-sm">Zgadzam się z
-          <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">polityką prywatności</a>
+      <div class="mb-4 flex items-start">
+        <input type="checkbox" name="privacy_policy_contact_form" id="privacy_policy_contact_form" required class="mr-2 mt-2">
+        <label for="privacy_policy_contact_form" class="text-sm pl-3">Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych dotyczących usług serwisu drogą elektroniczną.
+          <button class="js-open">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+          <span class="hidden">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z korzystaniem z usług serwisu RealtyHub24.com, zgodnie z ustawą o ochronie
+            danych
+            osobowych oraz zgodnie z
+            <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">Polityką Prywatności.</a>
+            <button class="js-close">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+          </span>
         </label>
       </div>
       <div>
@@ -561,20 +591,17 @@
           class="w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
       </div>
     </form>
-
     <button id="open-form" class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
       </svg>
     </button>
-
     <button id="close-form" class="hidden absolute right-0 md:-right-[2.6rem] top-1 md:top-4 bg-white md:border-t md:border-r md:border-b border-bordeBlue text-textBlue p-1 md:shadow-md group">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8  duration-200 group-hover:scale-90">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
       </svg>
     </button>
-
   </div>
   <a href="#" id="backToTop" class="fixed bottom-[2rem] right-10 hidden md:block cursor-pointer p-2 bg-bgBlue duration-300 group">
     <svg class="h-6 w-6 fill-textLight rotate-180 duration-300 group-hover:-translate-y-1">
