@@ -3,6 +3,7 @@ import initSwiper from './modules/swiper';
 import { initAnimateElements } from './modules/animationElements';
 import backToTop from './modules/backToTop';
 import contactFormDhow from './modules/contactFormShow';
+import privacypolicy from './modules/privacy-policy';
 import '../main.css';
 require('fslightbox');
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimateElements();
   backToTop();
   contactFormDhow();
+  privacypolicy();
 });
 
 if (import.meta.webpackHot) {
