@@ -88,3 +88,11 @@
     @apply bg-green-700 border-white  border-4 outline-green-700;
   }
 }
+/* form php */
+.success {
+  @apply text-white bg-green-600  border-green-600 p-2 rounded-lg;
+}
+
+.error {
+  @apply text-white bg-red-600  border-red-600 p-2 rounded-lg;
+}
