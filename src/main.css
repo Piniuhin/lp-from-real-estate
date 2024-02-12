@@ -5,6 +5,20 @@
 @layer base {
   html {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  .container {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(300px);
+    scroll-snap-type: y mandatory;
+  }
+  .child {
+    scroll-snap-align: start;
+  }
+  /* Чтобы не прыгал scrollbar при открытии модального окна */
+  html,
+  body {
+    scrollbar-gutter: stale;
   }
 }
 
