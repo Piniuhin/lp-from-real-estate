@@ -201,7 +201,7 @@
     </div>
   </footer>
   <div class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
-    <form hx-post="./php/contact-form.php" hx-target="#form-response">
+    <form id="contact-form" hx-post="./php/contact-form.php" hx-target="#form-response">
 
       <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
       <div class="mb-4">
@@ -246,7 +246,6 @@
       </div>
     </form>
     <div id="form-response" class="border border-transparent rounded-sm mt-5"></div>
-
 
     <button id="open-form" class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">

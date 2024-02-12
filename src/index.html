@@ -375,7 +375,7 @@
           <p class="text-center">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
 
           <div class="client-form-wrapper pb-8 mt-10">
-            <form hx-post="./php/real-estate-form.php" hx-target="#form-response" enctype="multipart/form-data">
+            <form id="add-realty-form" hx-post="./php/real-estate-form.php" hx-target="#form-response-realty-add" enctype="multipart/form-data">
 
               <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
                 <!-- Имя и фамилия -->
@@ -512,7 +512,7 @@
                 </div>
               </div>
             </form>
-            <div id="form-response" class="border border-transparent rounded-sm mt-5"></div>
+            <div id="form-response-realty-add" class="border border-transparent rounded-sm mt-5"></div>
           </div>
         </div>
       </div>
@@ -563,7 +563,7 @@
 
 
   <div class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
-    <form hx-post="./php/contact-form.php" hx-target="#form-response">
+    <form id="contact-form" hx-post="./php/contact-form.php" hx-target="#form-response">
 
       <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
       <div class="mb-4">
