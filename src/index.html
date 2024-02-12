@@ -448,9 +448,11 @@
               <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2 items-end">
                 <!-- Фотографии -->
                 <div>
-                  <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia <span class="text-red-600">*</span></label>
-                  <input type="file" name="photos" id="photos" required multiple class="w-full py-2 border rounded focus:outline-none">
+                  <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia (format: jpg, png; maksymalna ilość: 10 szt.) <span class="text-red-600">*</span></label>
+                  <input type="file" name="photos[]" id="photos" required multiple class="w-full py-2 border rounded focus:outline-none">
                 </div>
+
+
                 <!-- Видео -->
                 <div>
                   <label for="video" class="block text-sm font-medium text-gray-700">Video (link do filmu)</label>
