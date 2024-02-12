@@ -20,6 +20,16 @@
   body {
     scrollbar-gutter: stale;
   }
+  /* scrollbar standard  */
+  ::-webkit-scrollbar {
+    @apply w-1 h-1 bg-[#c6c6c6] rounded-full;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#c6c6c6] rounded-full;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-sky-600  rounded-full;
+  }
 }
 
 @layer components {
