@@ -10,20 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2FDYB5GD3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C2FDYB5GD3');
+</script>
 </head>
 
 <body class="overflow-x-hidden">
   <!-- header -->
   <header class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-white transition-all duration-1000 ease-in-out flex justify-center shadow-md">
     <div class="container flex items-center justify-between">
-      <a href="./index.html" class="flex h-8 w-auto opacity-0 init-animate-1" data-delay="0.3s" data-time="1s">
+      <a href="./" class="flex h-8 w-auto opacity-0 init-animate-1" data-delay="0.3s" data-time="1s">
         <img src="./images/logo.svg" alt="Logo" />
       </a>
 
       <nav id="mobile-navigation"
         class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto">
         <div class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden">
-          <a href="./index.html">
+          <a href="./">
             <img src="./images/logo.svg" alt="Logo" class="flex h-8 w-auto  opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
           </a>
           <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
