@@ -10,20 +10,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2FDYB5GD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C2FDYB5GD3');
+  </script>
 <script defer src="index.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body class="overflow-x-hidden">
   <!-- header -->
   <header class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-white transition-all duration-1000 ease-in-out flex justify-center shadow-md">
     <div class="container flex items-center justify-between">
-      <a href="./index.html" class="flex h-8 w-auto opacity-0 init-animate-1" data-delay="0.3s" data-time="1s">
+      <a href="./" class="flex h-8 w-auto opacity-0 init-animate-1" data-delay="0.3s" data-time="1s">
         <img src="./images/logo.svg" alt="Logo" />
       </a>
 
       <nav id="mobile-navigation"
         class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto">
         <div class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden">
-          <a href="./index.html">
+          <a href="./">
             <img src="./images/logo.svg" alt="Logo" class="flex h-8 w-auto  opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
           </a>
           <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
@@ -364,7 +375,8 @@
           <p class="text-center">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
 
           <div class="client-form-wrapper pb-8 mt-10">
-            <form action="путь_обработчика_формы" method="post">
+            <form id="add-realty-form" hx-post="./php/real-estate-form.php" hx-target="#form-response-realty-add" enctype="multipart/form-data">
+
               <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
                 <!-- Имя и фамилия -->
                 <div>
@@ -436,9 +448,11 @@
               <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2 items-end">
                 <!-- Фотографии -->
                 <div>
-                  <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia <span class="text-red-600">*</span></label>
-                  <input type="file" name="photos" id="photos" required multiple class="w-full py-2 border rounded focus:outline-none">
+                  <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia (format: jpg, png; maksymalna ilość: 10 szt.) <span class="text-red-600">*</span></label>
+                  <input type="file" name="photos[]" id="photos" required multiple class="w-full py-2 border rounded focus:outline-none">
                 </div>
+
+
                 <!-- Видео -->
                 <div>
                   <label for="video" class="block text-sm font-medium text-gray-700">Video (link do filmu)</label>
@@ -500,6 +514,7 @@
                 </div>
               </div>
             </form>
+            <div id="form-response-realty-add" class="border border-transparent rounded-sm mt-5"></div>
           </div>
         </div>
       </div>
@@ -550,7 +565,8 @@
 
 
   <div class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
-    <form action="./php/contact-form.php" method="post">
+    <form id="contact-form" hx-post="./php/contact-form.php" hx-target="#form-response">
+
       <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
       <div class="mb-4">
         <input type="text" name="fullname" placeholder="Imię i Nazwisko *" required class="w-full py-2 border rounded focus:outline-none">
@@ -593,6 +609,8 @@
           class="w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
       </div>
     </form>
+    <div id="form-response" class="border border-transparent rounded-sm mt-5"></div>
+
     <button id="open-form" class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">
         <path stroke-linecap="round" stroke-linejoin="round"
