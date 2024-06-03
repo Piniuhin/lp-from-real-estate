@@ -1,636 +1,1025 @@
 <!DOCTYPE html>
 <html class="overflow-x-hidden scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./dist/main.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <body class="overflow-x-hidden">
+    <!-- header -->
+    <header
+      class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-red-500 transition-all duration-1000 ease-in-out flex justify-center shadow-md"
+    >
+      <div class="container flex items-center justify-between">
+        <a
+          href="./"
+          class="flex h-8 w-auto opacity-0 init-animate-1"
+          data-delay="0.3s"
+          data-time="1s"
+        >
+          <img src="./images/logo.svg" alt="Logo" />
+        </a>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2FDYB5GD3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        <nav
+          id="mobile-navigation"
+          class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto"
+        >
+          <div
+            class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden"
+          >
+            <a href="./">
+              <img
+                src="./images/logo.svg"
+                alt="Logo"
+                class="flex h-8 w-auto opacity-0 init-animate-1"
+                data-delay="0.3s"
+                data-time="1s"
+              />
+            </a>
+            <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
+              <svg class="w-8 h-8 text-iconDark">
+                <use href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+            </button>
+          </div>
 
-    gtag('config', 'G-C2FDYB5GD3');
-  </script>
-</head>
-
-<body class="overflow-x-hidden">
-  <!-- header -->
-  <header class="fixed top-0 left-0 right-0 w-wull h-[4.5rem] z-50 bg-white transition-all duration-1000 ease-in-out flex justify-center shadow-md">
-    <div class="container flex items-center justify-between">
-      <a href="./" class="flex h-8 w-auto opacity-0 init-animate-1" data-delay="0.3s" data-time="1s">
-        <img src="./images/logo.svg" alt="Logo" />
-      </a>
-
-      <nav id="mobile-navigation"
-        class="z-50 fixed top-0 left-0 right-0 h-screen lg:h-0 bg-white text-black flex flex-col items-center justify-center transform translate-y-full transition-transform duration-200 ease-in-out lg:static lg:top-auto lg:bg-transparent lg:p-0 lg:flex-row lg:justify-start lg:transform:none; lg:translate-y-0 lg:transition-none lg:ml-auto">
-        <div class="container absolute top-0 left-0 right-0 flex justify-between items-center w-full h-[4.5rem] lg:hidden">
-          <a href="./">
-            <img src="./images/logo.svg" alt="Logo" class="flex h-8 w-auto  opacity-0 init-animate-1" data-delay="0.3s" data-time="1s" />
-          </a>
-          <button class="xl:hidden opacity-0 init-animate-1" id="close-menu">
+          <ul class="flex items-center flex-col gap-8 lg:gap-6 text-white text-center lg:flex-row">
+            <li class="relative">
+              <a
+                href="#about"
+                class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center"
+              >
+                O nas
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#realestate"
+                class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center"
+              >
+                Portal nieruchomości
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                href="#contact"
+                class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center"
+              >
+                Oferta
+              </a>
+            </li>
+            <li
+              class="border border-bordeBlue duration-200 bg-bgBlue hover:bg-transparent rounded-full group"
+            >
+              <a
+                href="https://realtyhub24.com/pl/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="py-3 px-4 text-navMenuMobile lg:text-navMenu text-white w-fit block duration-200 group-hover:text-textBlue"
+              >
+                Dołączyć się
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-4">
+          <button id="menu-toggle" class="lg:hidden">
             <svg class="w-8 h-8 text-iconDark">
-              <use href="./images/icons.svg#icon-close-menu"></use>
+              <use href="./images/icons.svg#icon-open-menu"></use>
             </svg>
           </button>
         </div>
-
-        <ul class="flex items-center flex-col gap-8 lg:gap-6 text-white text-center lg:flex-row">
-          <li class="relative">
-            <a href="#about"
-              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
-              O nas
-            </a>
-          </li>
-          <li class="relative">
-            <a href="#realestate"
-              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
-              Portal nieruchomości
-            </a>
-          </li>
-          <li class="relative">
-            <a href="#contact"
-              class="relative text-navMenuMobile lg:text-navMenu text-colorBase hover:text-textBlue duration-200 w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-bgBlue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center">
-              Oferta
-            </a>
-          </li>
-          <li class="border border-bordeBlue duration-200 bg-bgBlue hover:bg-transparent rounded-full group">
-            <a href="https://realtyhub24.com/pl/register" target="_blank" rel="noopener noreferrer"
-              class="py-3 px-4 text-navMenuMobile lg:text-navMenu text-white  w-fit block duration-200 group-hover:text-textBlue">
-              Dołączyć się
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="flex items-center gap-4">
-        <button id="menu-toggle" class="lg:hidden">
-          <svg class="w-8 h-8 text-iconDark">
-            <use href="./images/icons.svg#icon-open-menu"></use>
-          </svg>
-        </button>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="bg-bgSectionBeige relative h-full lg:h-screen lg:mt-0">
-      <div class="swiper mySwiper w-full h-full">
-        <div class="swiper-wrapper relative">
-          <!-- slide 1 -->
-          <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
-            <div class="relative flex w-full">
-              <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-5/12 flex items-center">
-                  <div class="w-full lg:w-11/12">
-                    <h1 class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5">
-                      Portal nieruchomości <br> dla <span class="text-textBlue"> deweloperów </span>
-                    </h1>
-                    <div class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
-                      <a href="https://realtyhub24.com/" target="_blank" rel="noopener noreferrer"
-                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
-                        Przejść na stronę
-                      </a>
-                      <a href="#projects"
-                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
-                        Zobacz więcej
-                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
-                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
-                        </svg>
-                      </a>
+    <main>
+      <!-- HERO -->
+      <section class="bg-bgSectionBeige relative h-full lg:h-screen lg:mt-0">
+        <div class="swiper mySwiper w-full h-full">
+          <div class="swiper-wrapper relative">
+            <!-- slide 1 -->
+            <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
+              <div class="relative flex w-full">
+                <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
+                  <div class="w-full lg:w-5/12 flex items-center">
+                    <div class="w-full lg:w-11/12">
+                      <h1
+                        class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5"
+                      >
+                        Portal nieruchomości <br />
+                        dla <span class="text-textBlue"> deweloperów </span>
+                      </h1>
+                      <div
+                        class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2"
+                      >
+                        <a
+                          href="https://realtyhub24.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue"
+                        >
+                          Przejść na stronę
+                        </a>
+                        <a
+                          href="#projects"
+                          class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group"
+                        >
+                          Zobacz więcej
+                          <svg
+                            class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1"
+                          >
+                            <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-1">
-                  <img src="./images/hero/slide-1.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                  <div
+                    class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-1"
+                  >
+                    <img
+                      src="./images/hero/slide-1.jpg"
+                      alt="slide-1"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- slide 2 -->
-          <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
-            <div class="relative flex w-full">
-              <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-5/12 flex items-center">
-                  <div class="w-full lg:w-11/12">
-                    <h1 class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5">
-                      Portal nieruchomości <br> dla <span class="text-textBlue"> inwestorów </span>
-                    </h1>
-                    <div class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
-                      <a href="https://realtyhub24.com/" target="_blank" rel="noopener noreferrer"
-                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
-                        Przejść na stronę
-                      </a>
-                      <a href="#projects"
-                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
-                        Zobacz więcej
-                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
-                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
-                        </svg>
-                      </a>
+            <!-- slide 2 -->
+            <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
+              <div class="relative flex w-full">
+                <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
+                  <div class="w-full lg:w-5/12 flex items-center">
+                    <div class="w-full lg:w-11/12">
+                      <h1
+                        class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5"
+                      >
+                        Portal nieruchomości <br />
+                        dla <span class="text-textBlue"> inwestorów </span>
+                      </h1>
+                      <div
+                        class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2"
+                      >
+                        <a
+                          href="https://realtyhub24.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue"
+                        >
+                          Przejść na stronę
+                        </a>
+                        <a
+                          href="#projects"
+                          class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group"
+                        >
+                          Zobacz więcej
+                          <svg
+                            class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1"
+                          >
+                            <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-4">
-                  <img src="./images/hero/slide-2.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                  <div
+                    class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-4"
+                  >
+                    <img
+                      src="./images/hero/slide-2.jpg"
+                      alt="slide-1"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- slide-3 -->
-          <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
-            <div class="relative flex w-full">
-              <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-5/12 flex items-center">
-                  <div class="w-full lg:w-11/12">
-                    <h1 class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5">
-                      Portal nieruchomości <br> dla <span class="text-textBlue">agencji nieruchomosci</span>
-                    </h1>
-                    <div class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
-                      <a href="https://realtyhub24.com/" target="_blank" rel="noopener noreferrer"
-                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
-                        Przejść na stronę
-                      </a>
-                      <a href="#projects"
-                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
-                        Zobacz więcej
-                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
-                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
-                        </svg>
-                      </a>
+            <!-- slide-3 -->
+            <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
+              <div class="relative flex w-full">
+                <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
+                  <div class="w-full lg:w-5/12 flex items-center">
+                    <div class="w-full lg:w-11/12">
+                      <h1
+                        class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5"
+                      >
+                        Portal nieruchomości <br />
+                        dla <span class="text-textBlue">agencji nieruchomosci</span>
+                      </h1>
+                      <div
+                        class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2"
+                      >
+                        <a
+                          href="https://realtyhub24.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue"
+                        >
+                          Przejść na stronę
+                        </a>
+                        <a
+                          href="#projects"
+                          class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group"
+                        >
+                          Zobacz więcej
+                          <svg
+                            class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1"
+                          >
+                            <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-3">
-                  <img src="./images/hero/slide-3.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                  <div
+                    class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-3"
+                  >
+                    <img
+                      src="./images/hero/slide-3.jpg"
+                      alt="slide-1"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- slide-4 -->
-          <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
-            <div class="relative flex w-full">
-              <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
-                <div class="w-full lg:w-5/12 flex items-center">
-                  <div class="w-full lg:w-11/12">
-                    <h1 class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5">
-                      Portal nieruchomości <br> dla <span class="text-textBlue"> wszystkich użytkowników </span>
-                    </h1>
-                    <div class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2">
-                      <a href="https://realtyhub24.com/" target="_blank" rel="noopener noreferrer"
-                        class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue">
-                        Przejść na stronę
-                      </a>
-                      <a href="#projects"
-                        class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group">
-                        Zobacz więcej
-                        <svg class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1">
-                          <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
-                        </svg>
-                      </a>
+            <!-- slide-4 -->
+            <div class="swiper-slide bg-white flex pt-[6.5rem] lg:pt-0">
+              <div class="relative flex w-full">
+                <div class="container lg:mx-auto flex flex-col-reverse lg:flex-row">
+                  <div class="w-full lg:w-5/12 flex items-center">
+                    <div class="w-full lg:w-11/12">
+                      <h1
+                        class="my-8 lg:mb-10 text-left text-titleH1Mob md:text-titleH1Table xxl:text-titleH1 font-medium opacity-0 init-animate-5"
+                      >
+                        Portal nieruchomości <br />
+                        dla <span class="text-textBlue"> wszystkich użytkowników </span>
+                      </h1>
+                      <div
+                        class="flex flex-col md:flex-row justify-start items-center gap-8 lg:gap-4 xxl:gap-9 mb-11 lg:mb-0 opacity-0 init-animate-2"
+                      >
+                        <a
+                          href="https://realtyhub24.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex justify-center items-center w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:bg-transparent hover:text-textBlue"
+                        >
+                          Przejść na stronę
+                        </a>
+                        <a
+                          href="#projects"
+                          class="flex justify-center items-center gap-2 w-10/12 sm:w-5/12 md:w-0 md:min-w-[15.25rem] h-[3.125rem] bg-transparent border border-borderBlue rounded-full text-textBtn text-textBlue duration-200 group"
+                        >
+                          Zobacz więcej
+                          <svg
+                            class="w-4 h-4 fill-fillBlue transition-all duration-200 transform translate-x-0 group-hover:translate-y-1"
+                          >
+                            <use href="./images/icons.svg#icon-icon-arrow-btn"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-3">
-                  <img src="./images/hero/slide-4.jpg" alt="slide-1" class="h-full w-full object-cover" />
+                  <div
+                    class="w-full h-full lg:w-6/12 lg:absolute right-0 top-0 bottom-0 overflow-hidden opacity-0 init-animate-3"
+                  >
+                    <img
+                      src="./images/hero/slide-4.jpg"
+                      alt="slide-1"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- slide-5 -->
-          <div class="swiper-slide bg-bgBlue flex">
-            <div class="h-screen flex w-full flex-col justify-center items-center px-5 lg:pt-[4.5rem]">
-              <img src="./images/logo-white.svg" alt="logo" class="h-[8rem] opacity-0 init-animate-1-1" />
-              <p class="text-white text-[1.5rem] text-center mt-5 opacity-0 init-animate-2" data-delay="0.3s">Międzynarodowy portal nieruchomości</p>
-              <a href="https://realtyhub24.com/" target="_blank" rel="noopener noreferrer"
-                class="flex justify-center items-center mt-12 w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-transparent border border-white rounded-full text-white  duration-200 hover:bg-transparent hover:bg-white hover:border-bordeBlue hover:text-textBlue opacity-0 init-animate-2"
-                data-delay="0.5s">
-                Zarejestruj się
-              </a>
+            <!-- slide-5 -->
+            <div class="swiper-slide bg-bgBlue flex">
+              <div
+                class="h-screen flex w-full flex-col justify-center items-center px-5 lg:pt-[4.5rem]"
+              >
+                <img
+                  src="./images/logo-white.svg"
+                  alt="logo"
+                  class="h-[8rem] opacity-0 init-animate-1-1"
+                />
+                <p
+                  class="text-white text-[1.5rem] text-center mt-5 opacity-0 init-animate-2"
+                  data-delay="0.3s"
+                >
+                  Międzynarodowy portal nieruchomości
+                </p>
+                <a
+                  href="https://realtyhub24.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex justify-center items-center mt-12 w-10/12 sm:w-5/12 md:w-0 md:min-w-[13rem] h-[3.125rem] bg-transparent border border-white rounded-full text-white duration-200 hover:bg-transparent hover:bg-white hover:border-bordeBlue hover:text-textBlue opacity-0 init-animate-2"
+                  data-delay="0.5s"
+                >
+                  Zarejestruj się
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="hidden z-20 absolute bottom-0 right-0 lg:flex items-center justify-center gap-[2.741rem] bg-white w-48 h-24 opacity-0 init-animate-2">
-        <button type="button" class="swiper-button-prev-ph group opacity-0 init-animate-4">
-          <svg class="w-12 h-12 fill-fillBlue duration-200 transform translate-x-0 group-hover:-translate-x-1">
-            <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
-          </svg>
-        </button>
-        <button type="button" class="swiper-button-next-ph group opacity-0 init-animate-5">
-          <svg class="w-12 h-12 fill-fillBlue duration-200 transform translate-x-0 group-hover:translate-x-1 rotate-180">
-            <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="lg:hidden w-full absolute z-30 top-[46%] -translate-y-1/2 flex justify-between item-center">
-        <button type="button" class="swiper-button-prev-ph group bg-bgBlue rounded-full opacity-0 init-animate-4">
-          <svg class="w-8 h-8 text-white duration-200 transform translate-x-0 group-hover:-translate-x-1 rotate-180">
-            <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
-          </svg>
-        </button>
-        <button type="button" class="swiper-button-next-ph group bg-bgBlue rounded-full opacity-0 init-animate-5">
-          <svg class="w-8 h-8 text-white duration-200 transform translate-x-0 group-hover:translate-x-1">
-            <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
-    <!-- O nas -->
-    <section id="about" class="relative py-20">
-      <div class="container">
-        <div class="relative z-20 xxl:w-10/12 mx-auto mb-5">
-          <div class="flex justify-center mb-5">
-            <h2
-              class="inline-block text-[1.5rem] text-center font-semibold text-textBlue  relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-bgBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
-              O nas
-            </h2>
-          </div>
-          <div class="text-content">
-            <p>Jesteśmy zespołem, który połączył swoje umiejętności w dziedzinie technologii, inwestycji i nieruchomości,
-              aby
-              stworzyć platformę, spełniającą oczekiwania wszystkich zainteresowanych stron.</p>
+        <div
+          class="hidden z-20 absolute bottom-0 right-0 lg:flex items-center justify-center gap-[2.741rem] bg-white w-48 h-24 opacity-0 init-animate-2"
+        >
+          <button type="button" class="swiper-button-prev-ph group opacity-0 init-animate-4">
+            <svg
+              class="w-12 h-12 fill-fillBlue duration-200 transform translate-x-0 group-hover:-translate-x-1"
+            >
+              <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
+            </svg>
+          </button>
+          <button type="button" class="swiper-button-next-ph group opacity-0 init-animate-5">
+            <svg
+              class="w-12 h-12 fill-fillBlue duration-200 transform translate-x-0 group-hover:translate-x-1 rotate-180"
+            >
+              <use href="./images/icons.svg#icon-icon-arrow-hero-slider"></use>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="lg:hidden w-full absolute z-30 top-[46%] -translate-y-1/2 flex justify-between item-center"
+        >
+          <button
+            type="button"
+            class="swiper-button-prev-ph group bg-bgBlue rounded-full opacity-0 init-animate-4"
+          >
+            <svg
+              class="w-8 h-8 text-white duration-200 transform translate-x-0 group-hover:-translate-x-1 rotate-180"
+            >
+              <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="swiper-button-next-ph group bg-bgBlue rounded-full opacity-0 init-animate-5"
+          >
+            <svg
+              class="w-8 h-8 text-white duration-200 transform translate-x-0 group-hover:translate-x-1"
+            >
+              <use href="./images/icons.svg#icon-arrow-hero-slider-mobile"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- O nas -->
+      <section id="about" class="relative py-20">
+        <div class="container">
+          <div class="relative z-20 xxl:w-10/12 mx-auto mb-5">
+            <div class="flex justify-center mb-5">
+              <h2
+                class="inline-block text-[1.5rem] text-center font-semibold text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-bgBlue after:w-6/12 after:transition after:duration-200 after:origin-center"
+              >
+                O nas
+              </h2>
+            </div>
+            <div class="text-content">
+              <p>
+                Jesteśmy zespołem, który połączył swoje umiejętności w dziedzinie technologii,
+                inwestycji i nieruchomości, aby stworzyć platformę, spełniającą oczekiwania
+                wszystkich zainteresowanych stron.
+              </p>
 
-            <p>Czy jesteś deweloperem, inwestorem, agencją nieruchomości czy użytkownikiem, który po prostu chce przeprowadzić operacje z nieruchomościami? Nasza platforma dostarcza Ci przestrzeń do
-              publikacji, reklamowania i wyszukiwania nieruchomości, dostosowaną do Twoich potrzeb. Zależy nam na tym, abyś mógł skoncentrować się na tym, co dla Ciebie najważniejsze.</p>
+              <p>
+                Czy jesteś deweloperem, inwestorem, agencją nieruchomości czy użytkownikiem, który
+                po prostu chce przeprowadzić operacje z nieruchomościami? Nasza platforma dostarcza
+                Ci przestrzeń do publikacji, reklamowania i wyszukiwania nieruchomości, dostosowaną
+                do Twoich potrzeb. Zależy nam na tym, abyś mógł skoncentrować się na tym, co dla
+                Ciebie najważniejsze.
+              </p>
 
-            <p>Jesteśmy ciągle w trakcie rozwoju RealtyHub24, aby dostarczyć wygodną usługę, która nie tylko ułatwia operacje z nieruchomościami, ale także wspiera różnorodne procesy biznesowe
-              związane z
-              publikacją ogłoszeń i promocją ofert.</p>
+              <p>
+                Jesteśmy ciągle w trakcie rozwoju RealtyHub24, aby dostarczyć wygodną usługę, która
+                nie tylko ułatwia operacje z nieruchomościami, ale także wspiera różnorodne procesy
+                biznesowe związane z publikacją ogłoszeń i promocją ofert.
+              </p>
 
-            <p>Dlaczego my? Ponieważ rozumiemy specyfikę rynku nieruchomości. Nasza platforma została zaprojektowana z myślą o potrzebach każdej grupy użytkowników, uwzględniając interesy każdego.
-              Chcemy,
-              abyś mógł szybko i sprawnie osiągnąć swoje cele.</p>
+              <p>
+                Dlaczego my? Ponieważ rozumiemy specyfikę rynku nieruchomości. Nasza platforma
+                została zaprojektowana z myślą o potrzebach każdej grupy użytkowników, uwzględniając
+                interesy każdego. Chcemy, abyś mógł szybko i sprawnie osiągnąć swoje cele.
+              </p>
 
-            <p>Nasza ekipa stara się, aby oferty zyskały nowe możliwości, a proces operacji z nieruchomościami stał się jeszcze bardziej efektywny. Jesteśmy tu, aby Cię wspierać w osiąganiu sukcesów
-              na
-              dynamicznym rynku nieruchomości.</p>
+              <p>
+                Nasza ekipa stara się, aby oferty zyskały nowe możliwości, a proces operacji z
+                nieruchomościami stał się jeszcze bardziej efektywny. Jesteśmy tu, aby Cię wspierać
+                w osiąganiu sukcesów na dynamicznym rynku nieruchomości.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <svg class="absolute w-[50rem] h-[50rem] -right-[8.5rem] -top-[7.5rem] text-black opacity-0 init-animate-4" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M256 510.5C188.02 510.5 124.11 484.03 76.04 435.96C27.97 387.89 1.5 323.98 1.5 256C1.5 188.02 27.97 124.11 76.04 76.04C124.11 27.97 188.02 1.5 256 1.5C323.98 1.5 387.89 27.97 435.96 76.04C484.03 124.11 510.5 188.02 510.5 256C510.5 323.98 484.03 387.89 435.96 435.96C387.89 484.03 323.98 510.5 256 510.5Z"
-          fill="white" />
-        <path
-          d="M256 3C290.16 3 323.29 9.69 354.48 22.88C384.61 35.62 411.66 53.87 434.9 77.1C458.14 100.34 476.38 127.39 489.12 157.52C502.31 188.71 509 221.84 509 256C509 290.16 502.31 323.29 489.12 354.48C476.38 384.61 458.13 411.66 434.9 434.9C411.66 458.14 384.61 476.38 354.48 489.12C323.29 502.31 290.16 509 256 509C221.84 509 188.71 502.31 157.52 489.12C127.39 476.38 100.34 458.13 77.1 434.9C53.86 411.66 35.62 384.61 22.88 354.48C9.69 323.29 3 290.16 3 256C3 221.84 9.69 188.71 22.88 157.52C35.62 127.39 53.87 100.34 77.1 77.1C100.34 53.86 127.39 35.62 157.52 22.88C188.71 9.69 221.84 3 256 3ZM256 0C114.62 0 0 114.62 0 256C0 397.38 114.62 512 256 512C397.38 512 512 397.38 512 256C512 114.62 397.38 0 256 0Z"
-          fill="#18aeff1a" />
-        <path d="M256 483.68C384.147 483.68 488.03 381.744 488.03 256C488.03 130.256 384.147 28.32 256 28.32C127.853 28.32 23.97 130.256 23.97 256C23.97 381.744 127.853 483.68 256 483.68Z"
-          fill="#18aeff1a" />
-        <path
-          d="M146.459 242.311C147.338 242.311 148.461 242.359 149.828 242.457C151.293 242.555 152.367 242.604 153.051 242.604C163.988 242.604 171.703 240.406 176.195 236.012C180.785 231.617 183.08 224.195 183.08 213.746C183.08 204.078 180.785 197.242 176.195 193.238C171.703 189.137 163.988 187.086 153.051 187.086C152.367 187.086 151.293 187.135 149.828 187.232C148.461 187.33 147.338 187.379 146.459 187.379V242.311ZM94.3105 374V148.414H153.637C173.07 148.414 187.182 149.342 195.971 151.197C204.76 152.955 211.889 156.031 217.357 160.426C223.803 165.699 228.588 172.193 231.713 179.908C234.936 187.623 236.547 196.803 236.547 207.447C236.547 220.436 234.252 231.324 229.662 240.113C225.17 248.902 218.139 256.129 208.568 261.793C224.877 269.02 233.471 286.158 234.35 313.209V313.941C234.447 316.773 234.545 320.875 234.643 326.246C235.033 351.637 239.232 367.555 247.24 374H185.57C184.203 369.312 183.178 364.43 182.494 359.352C181.908 354.176 181.615 348.658 181.615 342.799C181.615 339.186 181.713 334.84 181.908 329.762C182.104 324.586 182.201 321.217 182.201 319.654C182.201 305.885 180.395 296.461 176.781 291.383C173.168 286.305 166.674 283.766 157.299 283.766H146.459V374H94.3105ZM270.092 374V148.414H322.826V233.668H365.16V148.414H416.723V374H365.16V280.396H322.826V374H270.092Z"
-          fill="white" />
-      </svg>
-    </section>
-    <!-- realestate -->
-    <section id="realestate" class="relative z-20 py-20 bg-bgContent bg-cover bg-no-repeat bg-center bg-fixed">
-      <div class="container">
-        <div class="w-full xxl:w-10/12 mx-auto">
-          <div class="flex justify-center mb-5">
-            <h2 class="text-[1.5rem] text-center font-semibold text-black/90">
-              Portal nieruchomości <span
-                class="text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-bgBlue after:w-full after:transition after:duration-200 after:origin-center">RealtyHub24</span>
-            </h2>
+        <svg
+          class="absolute w-[50rem] h-[50rem] -right-[8.5rem] -top-[7.5rem] text-black opacity-0 init-animate-4"
+          viewBox="0 0 512 512"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 510.5C188.02 510.5 124.11 484.03 76.04 435.96C27.97 387.89 1.5 323.98 1.5 256C1.5 188.02 27.97 124.11 76.04 76.04C124.11 27.97 188.02 1.5 256 1.5C323.98 1.5 387.89 27.97 435.96 76.04C484.03 124.11 510.5 188.02 510.5 256C510.5 323.98 484.03 387.89 435.96 435.96C387.89 484.03 323.98 510.5 256 510.5Z"
+            fill="white"
+          />
+          <path
+            d="M256 3C290.16 3 323.29 9.69 354.48 22.88C384.61 35.62 411.66 53.87 434.9 77.1C458.14 100.34 476.38 127.39 489.12 157.52C502.31 188.71 509 221.84 509 256C509 290.16 502.31 323.29 489.12 354.48C476.38 384.61 458.13 411.66 434.9 434.9C411.66 458.14 384.61 476.38 354.48 489.12C323.29 502.31 290.16 509 256 509C221.84 509 188.71 502.31 157.52 489.12C127.39 476.38 100.34 458.13 77.1 434.9C53.86 411.66 35.62 384.61 22.88 354.48C9.69 323.29 3 290.16 3 256C3 221.84 9.69 188.71 22.88 157.52C35.62 127.39 53.87 100.34 77.1 77.1C100.34 53.86 127.39 35.62 157.52 22.88C188.71 9.69 221.84 3 256 3ZM256 0C114.62 0 0 114.62 0 256C0 397.38 114.62 512 256 512C397.38 512 512 397.38 512 256C512 114.62 397.38 0 256 0Z"
+            fill="#18aeff1a"
+          />
+          <path
+            d="M256 483.68C384.147 483.68 488.03 381.744 488.03 256C488.03 130.256 384.147 28.32 256 28.32C127.853 28.32 23.97 130.256 23.97 256C23.97 381.744 127.853 483.68 256 483.68Z"
+            fill="#18aeff1a"
+          />
+          <path
+            d="M146.459 242.311C147.338 242.311 148.461 242.359 149.828 242.457C151.293 242.555 152.367 242.604 153.051 242.604C163.988 242.604 171.703 240.406 176.195 236.012C180.785 231.617 183.08 224.195 183.08 213.746C183.08 204.078 180.785 197.242 176.195 193.238C171.703 189.137 163.988 187.086 153.051 187.086C152.367 187.086 151.293 187.135 149.828 187.232C148.461 187.33 147.338 187.379 146.459 187.379V242.311ZM94.3105 374V148.414H153.637C173.07 148.414 187.182 149.342 195.971 151.197C204.76 152.955 211.889 156.031 217.357 160.426C223.803 165.699 228.588 172.193 231.713 179.908C234.936 187.623 236.547 196.803 236.547 207.447C236.547 220.436 234.252 231.324 229.662 240.113C225.17 248.902 218.139 256.129 208.568 261.793C224.877 269.02 233.471 286.158 234.35 313.209V313.941C234.447 316.773 234.545 320.875 234.643 326.246C235.033 351.637 239.232 367.555 247.24 374H185.57C184.203 369.312 183.178 364.43 182.494 359.352C181.908 354.176 181.615 348.658 181.615 342.799C181.615 339.186 181.713 334.84 181.908 329.762C182.104 324.586 182.201 321.217 182.201 319.654C182.201 305.885 180.395 296.461 176.781 291.383C173.168 286.305 166.674 283.766 157.299 283.766H146.459V374H94.3105ZM270.092 374V148.414H322.826V233.668H365.16V148.414H416.723V374H365.16V280.396H322.826V374H270.092Z"
+            fill="white"
+          />
+        </svg>
+      </section>
+      <!-- realestate -->
+      <section
+        id="realestate"
+        class="relative z-20 py-20 bg-bgContent bg-cover bg-no-repeat bg-center bg-fixed"
+      >
+        <div class="container">
+          <div class="w-full xxl:w-10/12 mx-auto">
+            <div class="flex justify-center mb-5">
+              <h2 class="text-[1.5rem] text-center font-semibold text-black/90">
+                Portal nieruchomości
+                <span
+                  class="text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-bgBlue after:w-full after:transition after:duration-200 after:origin-center"
+                  >RealtyHub24</span
+                >
+              </h2>
+            </div>
+            <p class="text-center">
+              RealtyHub24 to wielojęzyczny portal nieruchomości, który nie tylko stale rozszerza
+              swoje językowe granice, ale także aktywnie promuje się w różnych krajach. To czyni
+              portal idealnym miejscem do międzynarodowej współpracy w branży nieruchomości,
+              przyczyniając się do wzrostu liczby klientów dla każdej z grup użytkowników.
+            </p>
+            <ul class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10">
+              <li
+                class="bg-white py-4 px-2 shadow-md rounded-md overflow-hidden opacity-0 init-animate-1-1"
+                data-delay="0.1"
+              >
+                <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">
+                  Deweloperzy / Inwestorzy
+                </h3>
+                <ul class="px-4 marker:text-textBlue list-none">
+                  <li>
+                    <p class="text-center">
+                      Rozpal zainteresowanie do swoich projektów nieruchomości na RealtyHub24.com.
+                      Więcej wyświetleń, więcej zainteresowania, więcej klientów!
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="bg-white py-4 px-2 shadow-md rounded-md opacity-0 init-animate-1-1"
+                data-delay="0.3"
+              >
+                <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">
+                  Agencji nieruchomości
+                </h3>
+                <ul class="px-4 marker:text-textBlue list-none">
+                  <li>
+                    <p class="text-center">
+                      Rozwijaj swój biznes jeszcze efektywniej z RealtyHub24.com! Poszukiwanie
+                      nowych nieruchomości stało się jeszcze prostsze. Użytkownicy, którzy z dużym
+                      zainteresowaniem oczekują na Twoje ekskluzywne propozycje.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="bg-white py-4 px-2 shadow-md rounded-md opacity-0 init-animate-1-1"
+                data-delay="0.5"
+              >
+                <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">
+                  Wszystkie uzytkownicy
+                </h3>
+                <ul class="px-4 marker:text-textBlue list-none">
+                  <li>
+                    <p class="text-center">
+                      Proste i dostępne umieszczanie prywatnych ofert nieruchomości, skuteczne
+                      wyszukiwanie – wszystko, czego potrzebujesz, znajdziesz na RealtyHub24.com.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <p class="text-center">RealtyHub24 to wielojęzyczny portal nieruchomości, który nie tylko stale rozszerza swoje językowe granice, ale także aktywnie promuje się w różnych krajach. To czyni
-            portal idealnym miejscem do międzynarodowej współpracy w branży nieruchomości, przyczyniając się do wzrostu liczby klientów dla każdej z grup użytkowników.</p>
-          <ul class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10">
+        </div>
+      </section>
 
-            <li class=" bg-white py-4 px-2 shadow-md rounded-md overflow-hidden opacity-0 init-animate-1-1" data-delay="0.1">
+      <!-- Offer -->
+      <section id="about" class="py-20">
+        <div class="container">
+          <div class="w-full xxl:w-10/12 mx-auto mb-5">
+            <div class="flex justify-center mb-5">
+              <h2
+                class="inline-block text-[1.5rem] text-center font-semibold text-black/90 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-black/90 after:w-6/12 after:transition after:duration-200 after:origin-center"
+              >
+                Oferta
+              </h2>
+            </div>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea corporis mollitia
+              incidunt nobis. Nobis, molestias. Consequatur natus mollitia aliquid beatae, suscipit
+              sequi labore ullam aperiam facere explicabo voluptatem doloremque.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- formProject -->
+      <section id="form-add" class="py-20 bg-sky-50">
+        <div class="container">
+          <div class="w-full xxl:w-10/12 mx-auto">
+            <div class="flex justify-center mb-5">
+              <h2
+                class="inline-block text-[1.5rem] text-center font-semibold text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-textBlue after:w-6/12 after:transition after:duration-200 after:origin-center"
+              >
+                Formularz Zgłoszenia Publikacji Nieruchomości
+              </h2>
+            </div>
+            <p class="text-center">
+              Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com
+              zwiększy zasięg poszukiwania klientów na twoją nieruchomość.
+            </p>
 
-              <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">Deweloperzy / Inwestorzy </h3>
-              <ul class="px-4 marker:text-textBlue list-none">
-                <li>
-                  <p class="text-center">Rozpal zainteresowanie do swoich projektów nieruchomości na RealtyHub24.com. Więcej wyświetleń, więcej zainteresowania, więcej klientów!</p>
-                </li>
-              </ul>
+            <div class="client-form-wrapper pb-8 mt-10">
+              <form
+                id="add-realty-form"
+                hx-post="./php/real-estate-form.php"
+                hx-target="#form-response-realty-add"
+                enctype="multipart/form-data"
+              >
+                <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
+                  <!-- Имя и фамилия -->
+                  <div>
+                    <label for="fullname" class="block text-sm font-medium text-gray-700"
+                      >Imię i nazwisko <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      name="fullname"
+                      id="fullname"
+                      placeholder="Jan  Kowalski"
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <!-- Название фирмы -->
+                  <div>
+                    <label for="company" class="block text-sm font-medium text-gray-700"
+                      >Nazwa firmy <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      name="company"
+                      id="company"
+                      placeholder="Firma Sp.zo.o."
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <!-- NIP -->
+                  <div>
+                    <label for="nip" class="block text-sm font-medium text-gray-700"
+                      >NIP <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      name="nip"
+                      id="nip"
+                      placeholder="123456789"
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                </div>
 
+                <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2">
+                  <!-- Адрес email -->
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700"
+                      >Adres email <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="email@gmail.com"
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <!-- Номер телефона -->
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700"
+                      >Numer telefonu <span class="text-red-600">*</span></label
+                    >
+                    <span class="flex gap-2 items-center">
+                      +48
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="123456789"
+                        required
+                        class="w-full py-2 border rounded focus:outline-none"
+                      />
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Название объекта -->
+                <div class="mb-4">
+                  <label for="objectname" class="block text-sm font-medium text-gray-700"
+                    >Nazwa projektu <span class="text-red-600">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="objectname"
+                    id="objectname"
+                    placeholder="Osiedle Marzeń"
+                    required
+                    class="w-full py-2 border rounded focus:outline-none"
+                  />
+                </div>
+                <!-- Описание объекта -->
+                <div class="mb-4">
+                  <label for="objectdescription" class="block text-sm font-medium text-gray-700"
+                    >Opis projektu <span class="text-red-600">*</span></label
+                  >
+                  <textarea
+                    name="objectdescription"
+                    id="objectdescription"
+                    placeholder="Szczegółowy opis projektu"
+                    required
+                    class="w-full py-2 border rounded focus:outline-none"
+                  ></textarea>
+                </div>
+
+                <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
+                  <!-- Количество домов -->
+                  <div>
+                    <label for="numberofhouses" class="block text-sm font-medium text-gray-700"
+                      >Liczba domów <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="number"
+                      name="numberofhouses"
+                      id="numberofhouses"
+                      placeholder="3"
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <!-- Количество этажей -->
+                  <div>
+                    <label for="numberoffloors" class="block text-sm font-medium text-gray-700"
+                      >Liczba pięter <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="number"
+                      name="numberoffloors"
+                      id="numberoffloors"
+                      placeholder="4"
+                      required
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <!-- Количество квартир -->
+                  <div>
+                    <label for="numberofapartments" class="block text-sm font-medium text-gray-700"
+                      >Liczba mieszkań</label
+                    >
+                    <input
+                      type="number"
+                      name="numberofapartments"
+                      id="numberofapartments"
+                      placeholder="24"
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <!-- Локализация -->
+                <div class="mb-4">
+                  <label for="location" class="block text-sm font-medium text-gray-700"
+                    >Lokalizacja (link z Google Maps) <span class="text-red-600">*</span></label
+                  >
+                  <input
+                    type="url"
+                    name="location"
+                    id="location"
+                    placeholder="https://maps.app.goo.gl/7HXJDj1nXLpPKyQV6"
+                    required
+                    class="w-full py-2 border rounded focus:outline-none"
+                  />
+                </div>
+
+                <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2 items-end">
+                  <!-- Фотографии -->
+                  <div>
+                    <label for="photos" class="block text-sm font-medium text-gray-700"
+                      >Zdjęcia (format: jpg, png; maksymalna ilość: 10 szt.)
+                      <span class="text-red-600">*</span></label
+                    >
+                    <input
+                      type="file"
+                      name="photos[]"
+                      id="photos"
+                      required
+                      multiple
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+
+                  <!-- Видео -->
+                  <div>
+                    <label for="video" class="block text-sm font-medium text-gray-700"
+                      >Video (link do filmu)</label
+                    >
+                    <input
+                      type="url"
+                      name="video"
+                      id="video"
+                      placeholder="https://youtu.be/r-G8vVLuN4I?si=EG-zMe5iINrdUlFf"
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <!-- Цены -->
+                <div class="mb-4 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
+                  <div>
+                    <label for="minprice" class="block text-sm font-medium text-gray-700"
+                      >Min. cena</label
+                    >
+                    <input
+                      type="number"
+                      name="minprice"
+                      id="minprice"
+                      placeholder="Min. cena"
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label for="maxprice" class="block text-sm font-medium text-gray-700"
+                      >Maks. cena</label
+                    >
+                    <input
+                      type="number"
+                      name="maxprice"
+                      id="maxprice"
+                      placeholder="Maks. cena"
+                      class="w-full py-2 border rounded focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <!-- Удобства -->
+                <div>
+                  <label for="amenities" class="block text-sm font-medium text-gray-700"
+                    >Udogodnienia <span class="text-red-600">*</span></label
+                  >
+                  <textarea
+                    name="amenities"
+                    id="amenities"
+                    required
+                    placeholder="winda, ochrona, okna PCV / PVC"
+                    class="w-full py-2 border rounded focus:outline-none"
+                  ></textarea>
+                </div>
+                <!-- Ключевые локации -->
+                <div>
+                  <label for="keylocations" class="block text-sm font-medium text-gray-700"
+                    >Kluczowe lokalizacje <span class="text-red-600">*</span></label
+                  >
+                  <textarea
+                    name="keylocations"
+                    id="keylocations"
+                    required
+                    placeholder="Przystanek autobusowy - 100m, Supermarket - 50m"
+                    class="w-full py-2 border rounded focus:outline-none"
+                  ></textarea>
+                </div>
+                <!-- Дополнительная информация -->
+                <div>
+                  <label for="additionalinfo" class="block text-sm font-medium text-gray-700"
+                    >Dodatkowe informacje</label
+                  >
+                  <textarea
+                    name="additionalinfo"
+                    id="additionalinfo"
+                    placeholder="Dodatkowe informacje, które mogłyby zainteresować użytkowników"
+                    class="w-full py-2 border rounded focus:outline-none"
+                  ></textarea>
+                </div>
+                <!-- Согласие политики приватности -->
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-5 mt-5">
+                  <div class="lg:w-10/12 mb-4 flex items-start">
+                    <input
+                      type="checkbox"
+                      name="privacy_policy_client_form"
+                      id="privacy_policy_client_form"
+                      required
+                      class="form-checkbox mr-2 mt-2"
+                    />
+                    <label for="privacy_policy_client_form" class="text-sm pl-3"
+                      >Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych
+                      dotyczących usług serwisu drogą elektroniczną.
+                      <button class="js-open">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-3 h-3"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </button>
+                      <span class="hidden"
+                        >Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z
+                        korzystaniem z usług serwisu RealtyHub24.com, zgodnie z ustawą o ochronie
+                        danych osobowych oraz zgodnie z
+                        <a
+                          href="./privacy-policy.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-textBlue hover:underline"
+                          >Polityką Prywatności.</a
+                        >
+                        <button class="js-close">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-3 h-3"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15.75 19.5 8.25 12l7.5-7.5"
+                            />
+                          </svg>
+                        </button>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="lg:w-2/12">
+                    <button
+                      type="submit"
+                      class="w-full sm:w-[15rem] lg:w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    >
+                      Wyślij
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div
+                id="form-response-realty-add"
+                class="border border-transparent rounded-sm mt-5"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer id="contact" class="pt-[5rem] pb-[5rem] bg-bgFooter">
+      <div class="container">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <a href="./">
+            <img
+              class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1"
+              src="./images/logo-white.svg"
+              alt=""
+          /></a>
+          <div class="flex flex-col lg:flex-row items-center gap-6">
+            <p
+              class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2"
+            >
+              Masz dodatkowe pytania?
+            </p>
+            <a
+              href="https://realtyhub24.com/pl/kontakt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex justify-center items-center py-3 px-4 bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4"
+            >
+              Skontaktuj się z nami
+            </a>
+          </div>
+        </div>
+        <span
+          class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"
+        ></span>
+        <div class="flex flex-col lg:flex-row justify-between">
+          <ul class="flex justify-center lg:justify-start flex-col md:flex-row mb-5 gap-5">
+            <li class="text-center md:text-left group pacity-0 init-animate-5">
+              <a
+                href="./privacy-policy.html"
+                class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue"
+                >Polityka prywatności</a
+              >
             </li>
-            <li class="bg-white py-4 px-2 shadow-md rounded-md opacity-0 init-animate-1-1" data-delay="0.3">
-
-
-              <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">Agencji nieruchomości</h3>
-              <ul class="px-4 marker:text-textBlue list-none">
-                <li>
-                  <p class="text-center">Rozwijaj swój biznes jeszcze efektywniej z RealtyHub24.com! Poszukiwanie nowych nieruchomości stało się jeszcze prostsze. Użytkownicy, którzy z dużym
-                    zainteresowaniem oczekują na Twoje ekskluzywne
-                    propozycje. </p>
-                </li>
-              </ul>
+            <li class="text-center md:text-left group pacity-0 init-animate-5">
+              <a
+                href="./service-cost.html"
+                class="text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue"
+                >Usługi</a
+              >
             </li>
-            <li class="bg-white py-4 px-2 shadow-md rounded-md opacity-0 init-animate-1-1" data-delay="0.5">
-
-              <h3 class="font-semibold text-[1.1rem] text-center mb-5 border-b pb-4">Wszystkie uzytkownicy</h3>
-              <ul class="px-4 marker:text-textBlue list-none">
-                <li>
-                  <p class="text-center">Proste i dostępne umieszczanie prywatnych ofert nieruchomości, skuteczne wyszukiwanie – wszystko, czego potrzebujesz, znajdziesz na RealtyHub24.com.</p>
-                </li>
-              </ul>
+          </ul>
+          <ul
+            class="flex justify-center lg:justify-end flex-col md:flex-row gap-5 md:gap-12 opacity-0 init-animate-4"
+          >
+            <li class="text-center md:text-left">
+              <a
+                class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover"
+                href="tel:+48537450501"
+                >tel: 537 450 501</a
+              >
+            </li>
+            <li class="text-center md:text-left">
+              <a
+                class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover"
+                href="mailto:giarddesign@kontakt.pl"
+                >email: kontakt@realtyhub24.com</a
+              >
             </li>
           </ul>
         </div>
+
+        <p class="text-center lg:text-left lg:text-textBase text-neutral-400 mt-5 lg:mb-0">
+          RealtyHub24.com - Wszelkie prawa zastrzeżone © 2024
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Offer -->
-    <section id="about" class="py-20">
-      <div class="container">
-        <div class="w-full xxl:w-10/12 mx-auto mb-5">
+    <div
+      class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white border border-bordeBlue shadow-lg duration-200 -translate-x-full"
+    >
+      <div id="form-response" class="border border-transparent rounded-sm mt-5"></div>
 
-          <div class="flex justify-center mb-5">
-            <h2
-              class="inline-block text-[1.5rem] text-center font-semibold text-black/90 relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-black/90 after:w-6/12 after:transition after:duration-200 after:origin-center">
-              Oferta
-            </h2>
-          </div>
-          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea corporis mollitia incidunt nobis. Nobis, molestias. Consequatur natus mollitia aliquid beatae,
-            suscipit sequi labore ullam aperiam facere explicabo voluptatem doloremque.</p>
-        </div>
-      </div>
-    </section>
-    <!-- formProject -->
-    <section id="form-add" class="py-20 bg-sky-50">
-      <div class="container">
-        <div class="w-full xxl:w-10/12 mx-auto">
-          <div class="flex justify-center mb-5">
-            <h2
-              class="inline-block text-[1.5rem] text-center font-semibold text-textBlue relative after:block after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[1px] after:bg-textBlue after:w-6/12 after:transition after:duration-200 after:origin-center">
-              Formularz Zgłoszenia Publikacji Nieruchomości
-            </h2>
-          </div>
-          <p class="text-center">Jesteś deweloperem lub inwestorem? Wypełnij formularz, a portal realtyhub24.com zwiększy zasięg poszukiwania klientów na twoją nieruchomość.</p>
-
-          <div class="client-form-wrapper pb-8 mt-10">
-            <form id="add-realty-form" hx-post="./php/real-estate-form.php" hx-target="#form-response-realty-add" enctype="multipart/form-data">
-
-              <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
-                <!-- Имя и фамилия -->
-                <div>
-                  <label for="fullname" class="block text-sm font-medium text-gray-700">Imię i nazwisko <span class="text-red-600">*</span></label>
-                  <input type="text" name="fullname" id="fullname" placeholder="Jan  Kowalski" required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <!-- Название фирмы -->
-                <div>
-                  <label for="company" class="block text-sm font-medium text-gray-700">Nazwa firmy <span class="text-red-600">*</span></label>
-                  <input type="text" name="company" id="company" placeholder="Firma Sp.zo.o." required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <!-- NIP -->
-                <div>
-                  <label for="nip" class="block text-sm font-medium text-gray-700">NIP <span class="text-red-600">*</span></label>
-                  <input type="text" name="nip" id="nip" placeholder="123456789" required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-              </div>
-
-              <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2">
-                <!-- Адрес email -->
-                <div>
-                  <label for="email" class="block text-sm font-medium text-gray-700">Adres email <span class="text-red-600">*</span></label>
-                  <input type="email" name="email" id="email" placeholder="email@gmail.com" required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <!-- Номер телефона -->
-                <div>
-                  <label for="phone" class="block text-sm font-medium text-gray-700">Numer telefonu <span class="text-red-600">*</span></label>
-                  <span class="flex gap-2 items-center">
-                    +48
-                    <input type="tel" name="phone" id="phone" placeholder="123456789" required class="w-full py-2 border rounded focus:outline-none">
-                  </span>
-                </div>
-              </div>
-
-              <!-- Название объекта -->
-              <div class="mb-4">
-                <label for="objectname" class="block text-sm font-medium text-gray-700">Nazwa projektu <span class="text-red-600">*</span></label>
-                <input type="text" name="objectname" id="objectname" placeholder="Osiedle Marzeń" required class="w-full py-2 border rounded focus:outline-none">
-              </div>
-              <!-- Описание объекта -->
-              <div class="mb-4">
-                <label for="objectdescription" class="block text-sm font-medium text-gray-700">Opis projektu <span class="text-red-600">*</span></label>
-                <textarea name="objectdescription" id="objectdescription" placeholder="Szczegółowy opis projektu" required class="w-full py-2 border rounded focus:outline-none"></textarea>
-              </div>
-
-              <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-3">
-                <!-- Количество домов -->
-                <div>
-                  <label for="numberofhouses" class="block text-sm font-medium text-gray-700">Liczba domów <span class="text-red-600">*</span></label>
-                  <input type="number" name="numberofhouses" id="numberofhouses" placeholder="3" required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <!-- Количество этажей -->
-                <div>
-                  <label for="numberoffloors" class="block text-sm font-medium text-gray-700">Liczba pięter <span class="text-red-600">*</span></label>
-                  <input type="number" name="numberoffloors" id="numberoffloors" placeholder="4" required class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <!-- Количество квартир -->
-                <div>
-                  <label for="numberofapartments" class="block text-sm font-medium text-gray-700">Liczba mieszkań</label>
-                  <input type="number" name="numberofapartments" id="numberofapartments" placeholder="24" class="w-full py-2 border rounded focus:outline-none">
-                </div>
-              </div>
-              <!-- Локализация -->
-              <div class="mb-4">
-                <label for="location" class="block text-sm font-medium text-gray-700">Lokalizacja (link z Google Maps) <span class="text-red-600">*</span></label>
-                <input type="url" name="location" id="location" placeholder="https://maps.app.goo.gl/7HXJDj1nXLpPKyQV6" required class="w-full py-2 border rounded focus:outline-none">
-              </div>
-
-              <div class="gap-4 lg:gap-10 mb-4 grid grid-cols-1 lg:grid-cols-2 items-end">
-                <!-- Фотографии -->
-                <div>
-                  <label for="photos" class="block text-sm font-medium text-gray-700">Zdjęcia (format: jpg, png; maksymalna ilość: 10 szt.) <span class="text-red-600">*</span></label>
-                  <input type="file" name="photos[]" id="photos" required multiple class="w-full py-2 border rounded focus:outline-none">
-                </div>
-
-
-                <!-- Видео -->
-                <div>
-                  <label for="video" class="block text-sm font-medium text-gray-700">Video (link do filmu)</label>
-                  <input type="url" name="video" id="video" placeholder="https://youtu.be/r-G8vVLuN4I?si=EG-zMe5iINrdUlFf" class="w-full py-2 border rounded focus:outline-none">
-                </div>
-              </div>
-              <!-- Цены -->
-              <div class="mb-4 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10">
-                <div>
-                  <label for="minprice" class="block text-sm font-medium text-gray-700">Min. cena</label>
-                  <input type="number" name="minprice" id="minprice" placeholder="Min. cena" class="w-full py-2 border rounded focus:outline-none">
-                </div>
-                <div>
-                  <label for="maxprice" class="block text-sm font-medium text-gray-700">Maks. cena</label>
-                  <input type="number" name="maxprice" id="maxprice" placeholder="Maks. cena" class="w-full  py-2 border rounded focus:outline-none">
-                </div>
-              </div>
-              <!-- Удобства -->
-              <div>
-                <label for="amenities" class="block text-sm font-medium text-gray-700">Udogodnienia <span class="text-red-600">*</span></label>
-                <textarea name="amenities" id="amenities" required placeholder="winda, ochrona, okna PCV / PVC" class="w-full py-2 border rounded focus:outline-none"></textarea>
-              </div>
-              <!-- Ключевые локации -->
-              <div>
-                <label for="keylocations" class="block text-sm font-medium text-gray-700">Kluczowe lokalizacje <span class="text-red-600">*</span></label>
-                <textarea name="keylocations" id="keylocations" required placeholder="Przystanek autobusowy - 100m, Supermarket - 50m" class="w-full py-2 border rounded focus:outline-none"></textarea>
-              </div>
-              <!-- Дополнительная информация -->
-              <div>
-                <label for="additionalinfo" class="block text-sm font-medium text-gray-700">Dodatkowe informacje</label>
-                <textarea name="additionalinfo" id="additionalinfo" placeholder="Dodatkowe informacje, które mogłyby zainteresować użytkowników"
-                  class="w-full py-2 border rounded focus:outline-none"></textarea>
-              </div>
-              <!-- Согласие политики приватности -->
-              <div class="flex flex-col lg:flex-row items-center justify-between gap-5 mt-5">
-                <div class="lg:w-10/12 mb-4 flex items-start">
-                  <input type="checkbox" name="privacy_policy_client_form" id="privacy_policy_client_form" required class="form-checkbox mr-2 mt-2">
-                  <label for="privacy_policy_client_form" class="text-sm pl-3">Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych dotyczących usług serwisu drogą elektroniczną.
-                    <button class="js-open">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                      </svg>
-                    </button>
-                    <span class="hidden">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z korzystaniem z usług serwisu RealtyHub24.com, zgodnie z ustawą o ochronie
-                      danych
-                      osobowych oraz zgodnie z
-                      <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">Polityką Prywatności.</a>
-                      <button class="js-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
-                      </button>
-                    </span>
-                  </label>
-                </div>
-                <div class="lg:w-2/12">
-                  <button type="submit"
-                    class="w-full sm:w-[15rem] lg:w-full   border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-3 px-4  rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
-                </div>
-              </div>
-            </form>
-            <div id="form-response-realty-add" class="border border-transparent rounded-sm mt-5"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-  <!-- footer -->
-  <footer id="contact" class="pt-[5rem] pb-[5rem] bg-bgFooter">
-    <div class="container">
-      <div class="flex flex-col lg:flex-row items-center justify-between">
-        <a href="./">
-          <img class="mb-8 lg:mb-0 h-10 opacity-0 init-animate-1" src="./images/logo-white.svg" alt="" /></a>
-        <div class="flex flex-col lg:flex-row items-center gap-6">
-          <p class="text-center lg:text-left text-textLight text-textBase opacity-0 init-animate-2">
-            Masz dodatkowe pytania?
-          </p>
-          <a href="https://realtyhub24.com/pl/kontakt" target="_blank" rel="noopener noreferrer"
-            class="flex justify-center items-center py-3 px-4 bg-bgBlue border-borderBlue rounded-full text-textBtn text-textLight border duration-200 hover:border-borderBlue hover:bg-transparent opacity-0 init-animate-4">
-            Skontaktuj się z nami
-          </a>
-        </div>
-      </div>
-      <span class="my-[3.875rem] p-0 after:conternt-[''] after:w-full h-[0.063rem] block bg-colorLight"></span>
-      <div class="flex flex-col lg:flex-row justify-between">
-        <ul class="flex justify-center lg:justify-start flex-col md:flex-row mb-5 gap-5 ">
-          <li class="text-center md:text-left group pacity-0 init-animate-5">
-            <a href="./privacy-policy.html" class=" text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Polityka prywatności</a>
-          </li>
-          <li class="text-center md:text-left group pacity-0 init-animate-5">
-            <a href="./service-cost.html" class=" text-textBase text-textLight lg:mb-0 duration-200 group-hover:text-textBlue ">Usługi</a>
-          </li>
-        </ul>
-        <ul class="flex justify-center lg:justify-end flex-col md:flex-row gap-5 md:gap-12 opacity-0 init-animate-4">
-          <li class="text-center md:text-left">
-            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="tel:+48537450501">tel: 537 450 501</a>
-          </li>
-          <li class="text-center md:text-left">
-            <a class="text-textNavFooter text-textLight duration-200 hover:text-colorLightHover" href="mailto:giarddesign@kontakt.pl">email: kontakt@realtyhub24.com</a>
-          </li>
-        </ul>
-      </div>
-
-      <p class="text-center lg:text-left lg:text-textBase text-neutral-400 mt-5 lg:mb-0">
-        RealtyHub24.com - Wszelkie prawa zastrzeżone © 2024
-      </p>
+      <button
+        id="open-form"
+        class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          />
+        </svg>
+      </button>
+      <button
+        id="close-form"
+        class="hidden absolute right-0 md:-right-[2.6rem] top-1 md:top-4 bg-white md:border-t md:border-r md:border-b border-bordeBlue text-textBlue p-1 md:shadow-md group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8 duration-200 group-hover:scale-90"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
-  </footer>
 
-
-  <div class="contact-form-wrapper p-6 fixed z-50 top-[5rem] left-0 w-full sm:w-[25rem] bg-white  border border-bordeBlue shadow-lg duration-200 -translate-x-full ">
-    <form id="contact-form" hx-post="./php/contact-form.php" hx-target="#form-response">
-
-      <h3 class="text-[1.4rem] mb-5">Napisz do nas!</h3>
-      <div class="mb-4">
-        <input type="text" name="fullname" placeholder="Imię i Nazwisko *" required class="w-full py-2 border rounded focus:outline-none">
-      </div>
-      <div class="mb-4">
-        <input type="text" name="company" placeholder="Nazwa firmy *" required class="w-full py-2 border rounded focus:outline-none">
-      </div>
-      <div class="mb-4">
-        <input type="email" name="email" placeholder="Email *" required class="w-full py-2 border rounded focus:outline-none">
-      </div>
-      <div class="mb-4">
-        <input type="tel" name="phone" placeholder="Numer telefonu *" required class="w-full py-2 border rounded focus:outline-none">
-      </div>
-      <div class="mb-4">
-        <textarea name="message" placeholder="Wiadomość *" required class="w-full py-2 border rounded focus:outline-none"></textarea>
-      </div>
-
-      <div class="mb-4 flex items-start">
-        <input type="checkbox" name="privacy_policy_contact_form" id="privacy_policy_contact_form" required class="mr-2 mt-2">
-        <label for="privacy_policy_contact_form" class="text-sm pl-3">Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych dotyczących usług serwisu drogą elektroniczną.
-          <button class="js-open">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-          </button>
-          <span class="hidden">Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z korzystaniem z usług serwisu RealtyHub24.com, zgodnie z ustawą o ochronie
-            danych
-            osobowych oraz zgodnie z
-            <a href="./privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-textBlue hover:underline">Polityką Prywatności.</a>
-            <button class="js-close">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-          </span>
-        </label>
-      </div>
-      <div>
-        <button type="submit"
-          class="w-full border border-bordeBlue text-textBlue bg-transparent duration-300 hover:bg-bgBlue hover:text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">Wyślij</button>
-      </div>
-    </form>
-    <div id="form-response" class="border border-transparent rounded-sm mt-5"></div>
-
-    <button id="open-form" class="open-form absolute -right-[2.6rem] top-4 bg-white border-t border-r border-b border-bordeBlue text-textBlue p-1 shadow-md group">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 duration-200 group-hover:scale-90 animate-jiggle-animation">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-      </svg>
-    </button>
-    <button id="close-form" class="hidden absolute right-0 md:-right-[2.6rem] top-1 md:top-4 bg-white md:border-t md:border-r md:border-b border-bordeBlue text-textBlue p-1 md:shadow-md group">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8  duration-200 group-hover:scale-90">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-  <a href="#" id="backToTop" class="fixed bottom-[2rem] right-10 hidden md:block cursor-pointer p-2 bg-bgBlue duration-300 group">
-    <svg class="h-6 w-6 fill-textLight rotate-180 duration-300 group-hover:-translate-y-1">
-      <use href="./images/icons.svg#icon-Icon-subMenu"></use>
-    </svg>
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/index.js"></script>
-</body>
-
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>
